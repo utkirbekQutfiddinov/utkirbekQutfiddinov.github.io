@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkirbek Qutfiddinov Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        table,tr,th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Utkirbek Qutfiddinov Resume</h1>
+        <p>
+            <a href="https://github.com/utkirbekQutfiddinov">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/utkirbekQutfiddinov/">LinkedIn</a> | 
+            utkirbekqutfiddinov@gmail.com
+        </p>
+        <i id="sayt"></i>
+    </header>
+    
+<main>
+    <table>
+        <thead>
+            Experience
+        </thead>
+        <tbody>
+            <tr>
+                <th>№</th>
+                <th>Company Name</th>
+                <th>Location</th>
+                <th>Employment type</th>
+                <th>Role</th>
+                <th>Start date</th>
+                <th>Finish date</th>
+                <th>Technologies</th>
+            </tr>
+                    <tr>
+                        <td><b>1.</b></td>
+                        <td><a href="https://www.linkedin.com/company/fido-biznes-uz">Fido Biznes LLC</a></td>
+                        <td>Tashkent, Uzbekistan</td>
+                        <td>Fulltime</td>
+                        <td>Software engineer</td>
+                        <td>02.10.2024</td>
+                        <td>Present</td>
+                        <td>Java, SQL, Spring, JSP, Kafka, Redis</td>
+                    </tr>
+        </tbody>
+    </table>
+    <table>
+            <thead>
+                Languages
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Level</th>
+                </tr>
+                <tr>
+                    <td>Uzbek</td>
+                    <td>native</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>C1</td>
+                </tr>
+                <tr>
+                    <td>Russian</td>
+                    <td>B1</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        
+    </footer>
+    <script>
+        
+        async function a(){
+            var kunuz=await fetch('https://www.kun.uz').then(resp=>{
+                var sayt=DOM.getElementById('sayt');
+                sayt.innerText(sayt);
+            })
+        }
+
+        a();
+    </script>
+</body>
+</html>
