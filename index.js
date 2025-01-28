@@ -1,4 +1,5 @@
 function showContent(type) {
+    console.log('document type:', type);
     const iframe = document.getElementById('contentFrame');
     if (type === 'tatu') {
         iframe.src = 'files/diploma.pdf';
