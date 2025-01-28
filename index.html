@@ -1,18 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="uz">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utkirbek Qutfiddinov</title>
-
-    <style>
-        table, tr, td, th {
-            border: 2px solid black;
-            border-collapse: collapse;
-            padding: 3px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
 <h1>Qutfiddinov Utkirbek Xusniddin o'g'li</h1>
-
 
 <table>
     <thead>
@@ -83,11 +79,17 @@
     <tr><th>Turi</th><th>Havola</th><th>Izoh</th></tr>
     </thead>
     <tbody>
-    <tr><td>Bakalavr dipomi</td><td><a href="https://drive.google.com/file/d/1GVJBWO3jAFhzoNivFk8VSeMnChwW31oO/view?usp=sharing">Ko'rish</a> </td><td>2017-2021 yillar</td></tr>
-    <tr><td>IELTS sertifikati</td><td><a href="https://drive.google.com/file/d/11id1EZlVcmLSV0eP0qAgn5QukR-ndpA3/view?usp=sharing">Ko'rish</a></td><td>2020-yil</td></tr>
+    <tr><td>Bakalavr dipomi</td><td><button onclick="showContent('diplom')">Show PDF</button></td><td>2017-2021 yillar</td></tr>
+    <tr><td>IELTS sertifikati</td><td> <button onclick="showContent('ielts')">Show JPEG</button></td><td>2020-yil</td></tr>
     </tbody>
     <tfoot></tfoot>
 </table>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe id="contentFrame"></iframe>
+    </div>
+</div>
 <br>
 <table>
     <thead>
