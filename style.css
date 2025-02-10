@@ -36,3 +36,8 @@ table,tr,th,td{
     border-collapse: collapse;
     padding: 5px;
 }
+
+#career-section>div{
+    border-left: 5px solid blue;
+    padding-left: 10px;
+}
