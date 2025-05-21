@@ -1,0 +1,2 @@
+# Hello world!
+This is my first post. I have been thinking about writing posts, but have not started yet. The motivation to start the blog is came from Vlad Mishustin (ex-Uber engineer), he wrote everything he was doing while preparing for FAANG since 2020.
