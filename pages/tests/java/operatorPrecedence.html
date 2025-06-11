@@ -1,10 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Tests</title>
+    <title>Operator precedence</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #eef3f8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .item {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: grab;
+            border-left: 5px solid #0077cc;
+            transition: all 0.2s ease;
+        }
+
+        .item.dragging {
+            opacity: 0.5;
+        }
+
+        .drag-over {
+            border: 2px dashed #0077cc;
+        }
+
+        #checkBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+
+<h2>Operator precedence</h2>
+
+<div id="container"></div>
+
+<button id="checkBtn" onclick="checkAnswer()">✅ Check</button>
+<div id="result"></div>
+
+<script>
+    const data = [
+        {"name": "Post-unary operators", "symbol": "expression++, expression--", "order": 0},
+        {"name": "Pre-unary operators", "symbol": "++expression, --expression", "order": 1},
+        {"name": "Other unary operators", "symbol": "-, !, ~, +, (type)", "order": 2},
+        {"name": "Cast", "symbol": "(Type) reference", "order": 3},
+        {"name": "Multiplication/division/modulus", "symbol": "*, /, %", "order": 4},
+        {"name": "Addition/subtraction", "symbol": "+, -", "order": 5},
+        {"name": "Shift operators", "symbol": "<<, >>, >>>", "order": 6},
+        {"name": "Relational operators", "symbol": "<, >, <=, >=, instanceof", "order": 7},
+        {"name": "Equal to/ not equal to", "symbol": "==, !=", "order": 8},
+        {"name": "Logical AND", "symbol": "&", "order": 9},
+        {"name": "Logical exclusive OR", "symbol": "^", "order": 10},
+        {"name": "Logical inclusive OR", "symbol": "|", "order": 11},
+        {"name": "Conditional AND", "symbol": "&&", "order": 12},
+        {"name": "Conditional OR", "symbol": "||", "order": 13},
+        {"name": "Ternary operators", "symbol": "boolean expression ? expression1 : expression2", "order": 14},
+        {"name": "Assignment operators", "symbol": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=", "order": 15},
+        {"name": "Arrow operator", "symbol": "->", "order": 16}
+    ];
+
+    const shuffled = [...data].sort(() => Math.random() - 0.5);
+    const container = document.getElementById('container');
+
+    shuffled.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.draggable = true;
+        div.dataset.order = item.order;
+        div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
+        container.appendChild(div);
+    });
+
+    let draggingEl = null;
+
+    container.addEventListener('dragstart', e => {
+        if (e.target.classList.contains('item')) {
+            draggingEl = e.target;
+            e.target.classList.add('dragging');
+        }
+    });
+
+    container.addEventListener('dragend', e => {
+        if (e.target.classList.contains('item')) {
+            e.target.classList.remove('dragging');
+        }
+    });
+
+
+    container.addEventListener('dragover', e => {
+        e.preventDefault();
+        const afterElement = getDragAfterElement(container, e.clientY);
+        const dragging = document.querySelector('.dragging');
+        if (afterElement == null) {
+            container.appendChild(dragging);
+        } else {
+            container.insertBefore(dragging, afterElement);
+        }
+    });
+
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.item:not(.dragging)')];
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+                return {offset: offset, element: child};
+            } else {
+                return closest;
+            }
+        }, {offset: Number.NEGATIVE_INFINITY}).element;
+    }
+
+    function checkAnswer() {
+
+        let score = 0, questionsCount = 0;
+
+        const items = Array.from(container.children);
+        items.forEach((el, i) => {
+            questionsCount++;
+            if (Number(el.dataset.order) === i) {
+                score++;
+            }
+        });
+
+
+        alert('Right questions:'+score+' questions count: '+questionsCount);
+
+    }
+</script>
 
 </body>
 </html>
