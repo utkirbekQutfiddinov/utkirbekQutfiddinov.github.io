@@ -25,7 +25,7 @@
 
         .item {
             background-color: #fff;
-            padding: 10px 20px;
+            padding: 1px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             cursor: grab;
@@ -82,17 +82,15 @@
         .then(response => {
             return response.text();
         })
-        .then(text => {
-            data = JSON.parse(text);
+        .then(text => [...JSON.parse(text)].sort(() => Math.random() - 0.5).slice(0, 10))
+        .then(data => {
 
-            data.forEach(el=>{
+            data.forEach(el => {
                 console.log(el)
             })
 
-            const shuffled = [...data].sort(() => Math.random() - 0.5);
             const container = document.getElementById('container');
-
-            shuffled.forEach(item => {
+            data.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'item';
                 div.draggable = true;
@@ -148,15 +146,26 @@
         let score = 0, questionsCount = 0;
 
         const items = Array.from(container.children);
+
+        // const correct=items.sort((el1,el2)=>el1.order-el2.order);
+        //
+        // console.log('correct: '+correct)
+        //
+        // correct.forEach(el=>{
+        //     console.log(el.order);
+        // })
+
         items.forEach((el, i) => {
+            let num = Number(el.order);
             questionsCount++;
-            if (Number(el.order) === i) {
-                el.style.backgroundColor='#7eea5f';
-                el.style.color='white';
+
+            if (num === correct[i]) {
+                el.style.backgroundColor = '#7eea5f';
+                el.style.color = 'white';
                 score++;
-            }else{
-                el.style.backgroundColor='#fa3b58';
-                el.style.color='white';
+            } else {
+                el.style.backgroundColor = '#fa3b58';
+                el.style.color = 'white';
             }
         });
 
