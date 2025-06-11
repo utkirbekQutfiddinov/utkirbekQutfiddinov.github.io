@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Post-unary operators",
+    "symbol": "expression++, expression--",
+    "isLeftToRight": true,
+    "order": 0
+  },
+  {
+    "name": "Pre-unary operators",
+    "symbol": "++expression, --expression",
+    "isLeftToRight": true,
+    "order": 1
+  },
+  {
+    "name": "Other unary operators",
+    "symbol": "-, !, ~, +, (type)",
+    "isLeftToRight": false,
+    "order": 2
+  },
+  {
+    "name": "Cast",
+    "symbol": "(Type) reference",
+    "isLeftToRight": false,
+    "order": 3
+  },
+  {
+  "name": "Multiplication/division/modulus",
+  "symbol": "*, /, %",
+  "isLeftToRight": true,
+  "order": 4
+},
+  {
+    "name": "Addition/subtraction",
+    "symbol": "+, -",
+    "isLeftToRight": true,
+    "order": 5
+  },
+  {
+    "name": "Shift operators",
+    "symbol": "<<, >>, >>>",
+    "isLeftToRight": true,
+    "order": 6
+  },
+  {
+    "name": "Relational operators",
+    "symbol": "<, >, <=, >=, instanceof",
+    "isLeftToRight": true,
+    "order": 7
+  },
+  {
+    "name": "Equal to/ not equal to",
+    "symbol": "==, !=",
+    "isLeftToRight": true,
+    "order": 8
+  },
+  {
+    "name": "Logical AND",
+    "symbol": "&",
+    "isLeftToRight": true,
+    "order": 9
+  },
+  {
+    "name": "Logical exclusive OR",
+    "symbol": "^",
+    "isLeftToRight": true,
+    "order": 10
+  },
+  {
+    "name": "Logical inclusive OR",
+    "symbol": "|",
+    "isLeftToRight": true,
+    "order": 11
+  },
+  {
+    "name": "Conditional AND",
+    "symbol": "&&",
+    "isLeftToRight": true,
+    "order": 12
+  },
+  {
+    "name": "Conditional OR",
+    "symbol": "||",
+    "isLeftToRight": true,
+    "order": 13
+  },
+  {
+    "name": "Ternary operators",
+    "symbol": "boolean expression ? expression1 : expression2",
+    "isLeftToRight": false,
+    "order": 14
+  },
+  {
+    "name": "Assignment operators",
+    "symbol": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=",
+    "isLeftToRight": false,
+    "order": 15
+  },
+  {
+    "name": "Arrow operator",
+    "symbol": "->",
+    "isLeftToRight": false,
+    "order": 16
+  }
+]
