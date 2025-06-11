@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
+    <style>
+        #about-me-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        #my-photo{
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 <div id="main-div">
@@ -15,19 +27,31 @@
         <a href="pages/cv.html">CV</a>
         <a href="pages/tests.html">Tests</a>
     </div>
-    <h1>Qutfiddinov Utkirbek</h1>
-    <img src="files/photos/mypic_bostonliq.jpg" style="width: 30%; display: flex"/>
-    <ul style="display: flex">
-        <a href="https://leetcode.com/utkirbekQutfiddinov/"><i class="fa fa-code"
-                                                               style="font-size:48px;color: #000"></i></a>
-        <a href="mailto:utkirbekqutfiddinov@gmailcom"><i class="fa fa-envelope" style="font-size:48px;color: #000"></i></a>
-        <a href="https://www.linkedin.com/in/utkirbekqutfiddinov/"><i class="fa fa-linkedin-square"
-                                                                      style="font-size:48px;color:#0A66C2"></i></a>
-        <a href="https://github.com/utkirbekqutfiddinov"><i class="fa fa-github" style="font-size:48px;color: #000"></i></a>
-        <a href="https://www.youtube.com/channel/UC3qYdbjHUBHXUtVrYISVMlQ?sub_confirmation=1"><i
-                class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
-        <a href="https://t.me/coding_journey"><i class="fa fa-telegram" style="font-size:48px;color: #0088cc"></i></a>
-    </ul>
+    <div id="about-me-container">
+        <img src="files/photos/mypic_bostonliq.jpg" alt="photo of Utkirbek Qutfiddinov" id="my-photo"/>
+        <div id="info">
+            <h1>Utkirbek Qutfiddinov</h1>
+            <p>
+                Hello! I'm a software engineer with a passion for building web applications and solving real-world problems.
+                I enjoy working with Java, Spring Boot, Quarkus and front-end tools.
+            </p>
+            <p>
+                In my free time, I like to write blogs, explore new technologies, and contribute to open-source projects.
+            </p>
+            <ul>
+                <a href="https://leetcode.com/utkirbekQutfiddinov/"><i class="fa fa-code"
+                                                                       style="font-size:48px;color: #000"></i></a>
+                <a href="mailto:utkirbekqutfiddinov@gmailcom"><i class="fa fa-envelope" style="font-size:48px;color: #000"></i></a>
+                <a href="https://www.linkedin.com/in/utkirbekqutfiddinov/"><i class="fa fa-linkedin-square"
+                                                                              style="font-size:48px;color:#0A66C2"></i></a>
+                <a href="https://github.com/utkirbekqutfiddinov"><i class="fa fa-github" style="font-size:48px;color: #000"></i></a>
+                <a href="https://www.youtube.com/channel/UC3qYdbjHUBHXUtVrYISVMlQ?sub_confirmation=1"><i
+                        class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
+                <a href="https://t.me/coding_journey"><i class="fa fa-telegram" style="font-size:48px;color: #0088cc"></i></a>
+            </ul>
+        </div>
+
+    </div>
 </div>
 </body>
 </html>
