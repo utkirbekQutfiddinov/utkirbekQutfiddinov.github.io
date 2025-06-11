@@ -35,6 +35,7 @@
 
         .item.dragging {
             opacity: 0.5;
+            background-color: green;
         }
 
         .drag-over {
@@ -58,48 +59,49 @@
             font-weight: bold;
         }
     </style>
+
+    <link rel="stylesheet" href="../../../style.css">
 </head>
 <body>
+<div class="main-div">
+    <div class="topnav">
+        <a href="../../../index.html">Home</a>
+        <a href="../../../pages/cv.html">CV</a>
+        <a class="active" href="../tests.html">Tests</a>
+    </div>
+    <h2>Operator precedence</h2>
 
-<h2>Operator precedence</h2>
+    <div id="container"></div>
 
-<div id="container"></div>
-
-<button id="checkBtn" onclick="checkAnswer()">✅ Check</button>
-<div id="result"></div>
+    <button id="checkBtn" onclick="checkAnswer()">✅ Check</button>
+    <div id="result"></div>
+</div>
 
 <script>
-    const data = [
-        {"name": "Post-unary operators", "symbol": "expression++, expression--", "order": 0},
-        {"name": "Pre-unary operators", "symbol": "++expression, --expression", "order": 1},
-        {"name": "Other unary operators", "symbol": "-, !, ~, +, (type)", "order": 2},
-        {"name": "Cast", "symbol": "(Type) reference", "order": 3},
-        {"name": "Multiplication/division/modulus", "symbol": "*, /, %", "order": 4},
-        {"name": "Addition/subtraction", "symbol": "+, -", "order": 5},
-        {"name": "Shift operators", "symbol": "<<, >>, >>>", "order": 6},
-        {"name": "Relational operators", "symbol": "<, >, <=, >=, instanceof", "order": 7},
-        {"name": "Equal to/ not equal to", "symbol": "==, !=", "order": 8},
-        {"name": "Logical AND", "symbol": "&", "order": 9},
-        {"name": "Logical exclusive OR", "symbol": "^", "order": 10},
-        {"name": "Logical inclusive OR", "symbol": "|", "order": 11},
-        {"name": "Conditional AND", "symbol": "&&", "order": 12},
-        {"name": "Conditional OR", "symbol": "||", "order": 13},
-        {"name": "Ternary operators", "symbol": "boolean expression ? expression1 : expression2", "order": 14},
-        {"name": "Assignment operators", "symbol": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=", "order": 15},
-        {"name": "Arrow operator", "symbol": "->", "order": 16}
-    ];
+    fetch('../../../files/tests/java/operatorPrecedence.json')
+        .then(response => {
+            return response.text();
+        })
+        .then(text => {
+            data = JSON.parse(text);
 
-    const shuffled = [...data].sort(() => Math.random() - 0.5);
-    const container = document.getElementById('container');
+            data.forEach(el=>{
+                console.log(el)
+            })
 
-    shuffled.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'item';
-        div.draggable = true;
-        div.dataset.order = item.order;
-        div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
-        container.appendChild(div);
-    });
+            const shuffled = [...data].sort(() => Math.random() - 0.5);
+            const container = document.getElementById('container');
+
+            shuffled.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.draggable = true;
+                div.order = item.order;
+                div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
+                container.appendChild(div);
+            });
+        });
+
 
     let draggingEl = null;
 
@@ -148,13 +150,18 @@
         const items = Array.from(container.children);
         items.forEach((el, i) => {
             questionsCount++;
-            if (Number(el.dataset.order) === i) {
+            if (Number(el.order) === i) {
+                el.style.backgroundColor='#7eea5f';
+                el.style.color='white';
                 score++;
+            }else{
+                el.style.backgroundColor='#fa3b58';
+                el.style.color='white';
             }
         });
 
 
-        alert('Right questions:'+score+' questions count: '+questionsCount);
+        alert('Right questions:' + score + ' questions count: ' + questionsCount);
 
     }
 </script>

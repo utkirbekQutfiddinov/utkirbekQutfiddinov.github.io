@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Tests</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<style>
+    a > img {
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 
+    .main-div > ul > li {
+        list-style-type: none;
+        width: 20%;
+    }
+
+    ul {
+        display: flex;
+        gap: 1%;
+        justify-content: center;
+    }
+</style>
+<body>
+<div class="main-div">
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../pages/cv.html">CV</a>
+        <a class="active" href="tests.html">Tests</a>
+    </div>
     <ul>
         <li>
-            <p>Java</p>
-            <ul>
-                <li><a href="tests/java/operatorPrecedence.html">Operator precedence</a></li>
-            </ul>
+            <a href="./tests/java/javaTests.html">
+                <img src="../../files/logos/java.png">
+            </a>
+        </li>
+        <li>
+            <a href="./tests/web/springTests.html">
+                <img src="../../files/logos/spring.png">
+            </a>
         </li>
     </ul>
+</div>
 </body>
 </html>
