@@ -15,7 +15,7 @@
             margin-bottom: 20px;
         }
 
-        #container {
+        .container {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -42,7 +42,7 @@
             border: 2px dashed #0077cc;
         }
 
-        #checkBtn {
+        .btn {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
@@ -51,12 +51,7 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-        }
-
-        #result {
-            margin-top: 15px;
-            font-size: 18px;
-            font-weight: bold;
+            align-content: center;
         }
     </style>
 
@@ -71,10 +66,12 @@
     </div>
     <h2>Operator precedence</h2>
 
-    <div id="container"></div>
+    <div id="questions" class="container"></div>
+    <div id="answers" class="container" style="display: none"></div>
 
-    <button id="checkBtn" onclick="checkAnswer()">✅ Check</button>
-    <div id="result"></div>
+    <button id="checkBtn" onclick="checkAnswer()" class="btn">✅ Check</button>
+    <button id="showAnswers" onclick="showAnswers()" style="display: none" class="btn">Show answers</button>
+    <button id="hideAnswers" onclick="hideAnswers()" style="display: none" class="btn">Hide answers</button>
 </div>
 
 <script>
@@ -89,47 +86,47 @@
                 console.log(el)
             })
 
-            const container = document.getElementById('container');
+            const questions = document.getElementById('questions');
             data.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'item';
                 div.draggable = true;
                 div.order = item.order;
                 div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
-                container.appendChild(div);
+                questions.appendChild(div);
             });
         });
 
 
     let draggingEl = null;
 
-    container.addEventListener('dragstart', e => {
+    questions.addEventListener('dragstart', e => {
         if (e.target.classList.contains('item')) {
             draggingEl = e.target;
             e.target.classList.add('dragging');
         }
     });
 
-    container.addEventListener('dragend', e => {
+    questions.addEventListener('dragend', e => {
         if (e.target.classList.contains('item')) {
             e.target.classList.remove('dragging');
         }
     });
 
 
-    container.addEventListener('dragover', e => {
+    questions.addEventListener('dragover', e => {
         e.preventDefault();
-        const afterElement = getDragAfterElement(container, e.clientY);
+        const afterElement = getDragAfterElement(questions, e.clientY);
         const dragging = document.querySelector('.dragging');
         if (afterElement == null) {
-            container.appendChild(dragging);
+            questions.appendChild(dragging);
         } else {
-            container.insertBefore(dragging, afterElement);
+            questions.insertBefore(dragging, afterElement);
         }
     });
 
-    function getDragAfterElement(container, y) {
-        const draggableElements = [...container.querySelectorAll('.item:not(.dragging)')];
+    function getDragAfterElement(questions, y) {
+        const draggableElements = [...questions.querySelectorAll('.item:not(.dragging)')];
         return draggableElements.reduce((closest, child) => {
             const box = child.getBoundingClientRect();
             const offset = y - box.top - box.height / 2;
@@ -143,23 +140,19 @@
 
     function checkAnswer() {
 
-        let score = 0, questionsCount = 0;
+        let score = 0, questionssCount = 0;
 
-        const items = Array.from(container.children);
+        const questions = document.getElementById('questions');
+        const items = Array.from(questions.children);
 
-        // const correct=items.sort((el1,el2)=>el1.order-el2.order);
-        //
-        // console.log('correct: '+correct)
-        //
-        // correct.forEach(el=>{
-        //     console.log(el.order);
-        // })
+        const correct=[...items].sort((el1,el2)=>el1.order-el2.order);
+
 
         items.forEach((el, i) => {
             let num = Number(el.order);
-            questionsCount++;
+            questionssCount++;
 
-            if (num === correct[i]) {
+            if (num === correct[i].order) {
                 el.style.backgroundColor = '#7eea5f';
                 el.style.color = 'white';
                 score++;
@@ -170,8 +163,46 @@
         });
 
 
-        alert('Right questions:' + score + ' questions count: ' + questionsCount);
+        const h1=document.createElement('h1');
+        h1.innerText='Your score is: '+score+'/'+questionssCount+' = '+score/questionssCount*100+'%';
+        questions.appendChild(h1);
 
+        const answers = document.getElementById('answers');
+
+        answers.appendChild(document.createElement('br'));
+
+        const p=document.createElement('p');
+        p.innerText='Correct order is:';
+        answers.appendChild(p);
+
+        correct.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'item';
+            div.draggable = true;
+            div.order = item.order;
+            div.style.backgroundColor = '#7eea5f';
+            div.style.color = 'white';
+            div.innerHTML = item.innerHTML;
+            answers.appendChild(div);
+        });
+
+        document.getElementById('showAnswers').style.display='block';
+        document.getElementById('checkBtn').style.display = 'none';
+
+    }
+
+    function showAnswers() {
+        document.getElementById('showAnswers').style.display='none';
+        document.getElementById('checkBtn').style.display = 'none';
+        document.getElementById('answers').style.display = 'block';
+        document.getElementById('hideAnswers').style.display = 'block';
+
+    }
+
+    function hideAnswers() {
+        document.getElementById('answers').style.display = 'none';
+        document.getElementById('hideAnswers').style.display = 'none';
+        document.getElementById('showAnswers').style.display='block';
     }
 </script>
 
