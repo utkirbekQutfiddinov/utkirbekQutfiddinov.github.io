@@ -1,0 +1,9 @@
+{
+  "technologies": [
+    {
+      "name": "Java",
+      "logo_url": "../files/logos/java.png",
+      "page_url": "tests/java/javaTests.html"
+    }
+  ]
+}

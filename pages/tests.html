@@ -30,18 +30,32 @@
         <a href="../pages/cv.html">CV</a>
         <a class="active" href="tests.html">Tests</a>
     </div>
-    <ul>
-        <li>
-            <a href="./tests/java/javaTests.html">
-                <img src="../../files/logos/java.png">
-            </a>
-        </li>
-        <li>
-            <a href="./tests/web/springTests.html">
-                <img src="../../files/logos/spring.png">
-            </a>
-        </li>
+    <ul id="technologies">
     </ul>
 </div>
+<script>
+    fetch('../../files/tests/tests.json')
+        .then(response => {
+            return response.text();
+        })
+        .then(text => JSON.parse(text))
+        .then(data => {
+            const technologies = document.getElementById('technologies');
+            data.technologies.forEach(item => {
+
+                const li=document.createElement('li');
+
+                const ahref=document.createElement('a');
+                ahref.href=item.page_url;
+
+                const img=document.createElement('img');
+                img.src=item.logo_url;
+
+                ahref.appendChild(img);
+                li.appendChild(ahref)
+                technologies.appendChild(li);
+            });
+        });
+</script>
 </body>
 </html>
