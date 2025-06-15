@@ -76,14 +76,16 @@
 
 <script>
     (function (){
-        const questions = document.getElementById('questions');
-        const answers = document.getElementById('answers');
+        const params = new URLSearchParams(window.location.search);
+        const technology = params.get("technology");
+        const topic = params.get("topic");
+        const count = params.get("count");
 
-        fetch('../../../files/tests/java/operatorPrecedence.json')
+        fetch('../../../files/tests/'+technology+'/'+topic+'.json')
             .then(response => {
                 return response.text();
             })
-            .then(text => [...JSON.parse(text)].sort(() => Math.random() - 0.5).slice(0, 10))
+            .then(text => [...JSON.parse(text)].sort(() => Math.random() - 0.5).slice(0, count))
             .then(data => {
 
                 data.forEach(el => {
@@ -101,10 +103,6 @@
                 });
             });
     })();
-
-
-
-
 
     let draggingEl = null;
 
