@@ -75,27 +75,35 @@
 </div>
 
 <script>
-    fetch('../../../files/tests/java/operatorPrecedence.json')
-        .then(response => {
-            return response.text();
-        })
-        .then(text => [...JSON.parse(text)].sort(() => Math.random() - 0.5).slice(0, 10))
-        .then(data => {
+    (function (){
+        const questions = document.getElementById('questions');
+        const answers = document.getElementById('answers');
 
-            data.forEach(el => {
-                console.log(el)
+        fetch('../../../files/tests/java/operatorPrecedence.json')
+            .then(response => {
+                return response.text();
             })
+            .then(text => [...JSON.parse(text)].sort(() => Math.random() - 0.5).slice(0, 10))
+            .then(data => {
 
-            const questions = document.getElementById('questions');
-            data.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item';
-                div.draggable = true;
-                div.order = item.order;
-                div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
-                questions.appendChild(div);
+                data.forEach(el => {
+                    console.log(el)
+                })
+
+                const questions = document.getElementById('questions');
+                data.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'item';
+                    div.draggable = true;
+                    div.order = item.order;
+                    div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
+                    questions.appendChild(div);
+                });
             });
-        });
+    })();
+
+
+
 
 
     let draggingEl = null;

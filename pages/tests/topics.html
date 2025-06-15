@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tests</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<style>
+    a > img {
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-div > ul > li {
+        list-style-type: none;
+        width: 20%;
+    }
+
+    ul {
+        display: flex;
+        gap: 1%;
+        justify-content: center;
+    }
+</style>
+<body>
+<div class="main-div">
+    <div class="topnav">
+        <a href="../../index.html">Home</a>
+        <a href="../cv.html">CV</a>
+        <a class="active" href="technologies.html">Tests</a>
+    </div>
+    <ul id="topics">
+    </ul>
+</div>
+<script>
+
+
+    (function () {
+
+        const params = new URLSearchParams(window.location.search);
+        const technology = params.get("technology");
+
+
+        fetch('../../files/tests/' + technology + '/topics.json')
+            .then(response => {
+                return response.text();
+            })
+            .then(text => {
+                return [...JSON.parse(text)];
+            })
+            .then(data => {
+                const topics = document.getElementById('topics');
+                data.topics.forEach(item => {
+
+                    const li = document.createElement('li');
+
+                    const ahref = document.createElement('a');
+                    ahref.href =item.type+'.html?technology='+technology+'&topic='+item.identifier+'&count='+item.count;
+
+                    li.appendChild(ahref)
+                    topics.appendChild(li);
+                });
+            });
+    })();
+
+
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tests</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <style>
     a > img {
@@ -26,30 +26,34 @@
 <body>
 <div class="main-div">
     <div class="topnav">
-        <a href="../index.html">Home</a>
-        <a href="../pages/cv.html">CV</a>
-        <a class="active" href="tests.html">Tests</a>
+        <a href="../../index.html">Home</a>
+        <a href="../cv.html">CV</a>
+        <a class="active" href="technologies.html">Tests</a>
     </div>
     <ul id="technologies">
     </ul>
 </div>
 <script>
-    fetch('../../files/tests/tests.json')
+    fetch('../../files/tests/technologies.json')
         .then(response => {
             return response.text();
         })
         .then(text => JSON.parse(text))
         .then(data => {
+
+            console.log(data)
             const technologies = document.getElementById('technologies');
             data.technologies.forEach(item => {
+
+                let id=item.identifier;
 
                 const li=document.createElement('li');
 
                 const ahref=document.createElement('a');
-                ahref.href=item.page_url;
+                ahref.href='topics.html?technology='+id;
 
                 const img=document.createElement('img');
-                img.src=item.logo_url;
+                img.src='../../files/logos/'+id+'.png';
 
                 ahref.appendChild(img);
                 li.appendChild(ahref)
