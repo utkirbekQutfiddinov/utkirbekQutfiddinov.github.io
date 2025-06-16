@@ -2,32 +2,32 @@
   "topic": "HTML structure",
   "questions": [
     {
-      "name": "<html>",
+      "name": "&lt;html&gt;",
       "comment": "",
       "order": 0
     },
     {
-      "name": "<head>",
+      "name": "&lt;head&gt;",
       "comment": "",
       "order": 1
     },
     {
-      "name": "</head>",
+      "name": "&lt;/head&gt;",
       "comment": "",
       "order": 2
     },
     {
-      "name": "<body>",
+      "name": "&lt;body&gt;",
       "comment": "",
       "order": 3
     },
     {
-      "name": "</body>",
+      "name": "&lt;/body&gt;",
       "comment": "",
       "order": 4
     },
     {
-      "name": "/html",
+      "name": "&lt;/html&gt",
       "comment": "",
       "order": 5
     }

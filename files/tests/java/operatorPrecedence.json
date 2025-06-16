@@ -3,104 +3,87 @@
   "questions": [
     {
       "name": "Post-unary operators",
-      "symbol": "expression++, expression--",
-      "isLeftToRight": true,
+      "comment": "expression++, expression--",
       "order": 0
     },
     {
       "name": "Pre-unary operators",
-      "symbol": "++expression, --expression",
-      "isLeftToRight": true,
+      "comment": "++expression, --expression",
       "order": 1
     },
     {
       "name": "Other unary operators",
-      "symbol": "-, !, ~, +, (type)",
-      "isLeftToRight": false,
+      "comment": "-, !, ~, +, (type)",
       "order": 2
     },
     {
       "name": "Cast",
-      "symbol": "(Type) reference",
-      "isLeftToRight": false,
+      "comment": "(Type) reference",
       "order": 3
     },
     {
       "name": "Multiplication/division/modulus",
-      "symbol": "*, /, %",
-      "isLeftToRight": true,
+      "comment": "*, /, %",
       "order": 4
     },
     {
       "name": "Addition/subtraction",
-      "symbol": "+, -",
-      "isLeftToRight": true,
+      "comment": "+, -",
       "order": 5
     },
     {
       "name": "Shift operators",
-      "symbol": "<<, >>, >>>",
-      "isLeftToRight": true,
+      "comment": "<<, >>, >>>",
       "order": 6
     },
     {
       "name": "Relational operators",
-      "symbol": "<, >, <=, >=, instanceof",
-      "isLeftToRight": true,
+      "comment": "<, >, <=, >=, instanceof",
       "order": 7
     },
     {
       "name": "Equal to/ not equal to",
-      "symbol": "==, !=",
-      "isLeftToRight": true,
+      "comment": "==, !=",
       "order": 8
     },
     {
       "name": "Logical AND",
-      "symbol": "&",
-      "isLeftToRight": true,
+      "comment": "&",
       "order": 9
     },
     {
       "name": "Logical exclusive OR",
-      "symbol": "^",
-      "isLeftToRight": true,
+      "comment": "^",
       "order": 10
     },
     {
       "name": "Logical inclusive OR",
-      "symbol": "|",
-      "isLeftToRight": true,
+      "comment": "|",
       "order": 11
     },
     {
       "name": "Conditional AND",
-      "symbol": "&&",
-      "isLeftToRight": true,
+      "comment": "&&",
       "order": 12
     },
     {
       "name": "Conditional OR",
-      "symbol": "||",
-      "isLeftToRight": true,
+      "comment": "||",
       "order": 13
     },
     {
       "name": "Ternary operators",
-      "symbol": "boolean expression ? expression1 : expression2",
-      "isLeftToRight": false,
+      "comment": "boolean expression ? expression1 : expression2",
       "order": 14
     },
     {
       "name": "Assignment operators",
-      "symbol": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=",
-      "isLeftToRight": false,
+      "comment": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=",
       "order": 15
     },
     {
       "name": "Arrow operator",
-      "symbol": "->",
-      "isLeftToRight": false,
+      "comment": "->",
       "order": 16
     }
   ]
