@@ -108,7 +108,7 @@
                     div.className = 'item';
                     div.draggable = true;
                     div.order = item.order;
-                    div.innerHTML = `<strong>${item.name}</strong><br><small>${item.symbol}</small>`;
+                    div.innerText = item.name+''+ item.comment;
                     questions.appendChild(div);
                 });
             });

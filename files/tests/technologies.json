@@ -3,6 +3,10 @@
     {
       "name": "Java",
       "identifier": "java"
+    },
+    {
+      "name": "HTML",
+      "identifier": "html"
     }
   ]
 }

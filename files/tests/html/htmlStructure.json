@@ -1,0 +1,35 @@
+{
+  "topic": "HTML structure",
+  "questions": [
+    {
+      "name": "<html>",
+      "comment": "",
+      "order": 0
+    },
+    {
+      "name": "<head>",
+      "comment": "",
+      "order": 1
+    },
+    {
+      "name": "</head>",
+      "comment": "",
+      "order": 2
+    },
+    {
+      "name": "<body>",
+      "comment": "",
+      "order": 3
+    },
+    {
+      "name": "</body>",
+      "comment": "",
+      "order": 4
+    },
+    {
+      "name": "/html",
+      "comment": "",
+      "order": 5
+    }
+  ]
+}
