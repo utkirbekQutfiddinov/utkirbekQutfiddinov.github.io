@@ -4,5 +4,11 @@
     "identifier": "operatorPrecedence",
     "type": "ordering",
     "count": 10
+  },
+  {
+    "name": "Access modifiers' restriction levels",
+    "identifier": "accessModifiersRestrictionLevels",
+    "type": "ordering",
+    "count": 5
   }
 ]
