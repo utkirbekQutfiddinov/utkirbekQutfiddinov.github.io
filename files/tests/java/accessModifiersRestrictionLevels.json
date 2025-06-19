@@ -1,0 +1,25 @@
+{
+  "topic": "Access modifiers (less restricted ones should be placed upper)",
+  "questions": [
+    {
+      "name": "public",
+      "comment": "",
+      "order": 0
+    },
+    {
+      "name": "protected",
+      "comment": "",
+      "order": 1
+    },
+    {
+      "name": "default",
+      "comment": "a.k.a package-private",
+      "order": 2
+    },
+    {
+      "name": "private",
+      "comment": "",
+      "order": 3
+    }
+  ]
+}
