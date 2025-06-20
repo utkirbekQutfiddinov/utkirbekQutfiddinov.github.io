@@ -108,7 +108,7 @@
                     div.className = 'item';
                     div.draggable = true;
                     div.order = item.order;
-                    div.innerHTML = `<strong>${item.name}</strong><br><small>${item.comment}</small>`;
+                    div.innerHTML = `<strong>${item.name}</strong><br><small>${item.comment}</small><br><em style="display: none">${item.description}</em>`;
                     questions.appendChild(div);
                 });
             });
@@ -199,6 +199,13 @@
             div.style.backgroundColor = '#7eea5f';
             div.style.color = 'white';
             div.innerHTML = item.innerHTML;
+
+            const description=document.createElement("em");
+            description.innerText=item.lastChild.innerText;
+
+            div.appendChild(description);
+
+
             answers.appendChild(div);
         });
 

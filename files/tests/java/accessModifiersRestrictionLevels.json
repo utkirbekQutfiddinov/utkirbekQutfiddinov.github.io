@@ -4,21 +4,25 @@
     {
       "name": "public",
       "comment": "",
+      "description": "accessible for all",
       "order": 0
     },
     {
       "name": "protected",
       "comment": "",
+      "description": "accessible within the class itself, for subclasses and classes within the same package",
       "order": 1
     },
     {
       "name": "default",
       "comment": "a.k.a package-private",
+      "description": "accessible within the class itself and for the classes within the same package",
       "order": 2
     },
     {
       "name": "private",
       "comment": "",
+      "description": "accessible only within the class itself",
       "order": 3
     }
   ]

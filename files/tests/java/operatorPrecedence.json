@@ -4,86 +4,103 @@
     {
       "name": "Post-unary operators",
       "comment": "expression++, expression--",
+      "description": "",
       "order": 0
     },
     {
       "name": "Pre-unary operators",
       "comment": "++expression, --expression",
+      "description": "",
       "order": 1
     },
     {
       "name": "Other unary operators",
       "comment": "-, !, ~, +, (type)",
+      "description": "",
       "order": 2
     },
     {
       "name": "Cast",
       "comment": "(Type) reference",
+      "description": "",
       "order": 3
     },
     {
       "name": "Multiplication/division/modulus",
       "comment": "*, /, %",
+      "description": "",
       "order": 4
     },
     {
       "name": "Addition/subtraction",
       "comment": "+, -",
+      "description": "",
       "order": 5
     },
     {
       "name": "Shift operators",
       "comment": "<<, >>, >>>",
+      "description": "",
       "order": 6
     },
     {
       "name": "Relational operators",
       "comment": "<, >, <=, >=, instanceof",
+      "description": "",
       "order": 7
     },
     {
       "name": "Equal to/ not equal to",
       "comment": "==, !=",
+      "description": "",
       "order": 8
     },
     {
       "name": "Logical AND",
       "comment": "&",
+      "description": "",
       "order": 9
     },
     {
       "name": "Logical exclusive OR",
       "comment": "^",
+      "description": "",
       "order": 10
     },
     {
       "name": "Logical inclusive OR",
       "comment": "|",
+      "description": "",
       "order": 11
     },
     {
       "name": "Conditional AND",
       "comment": "&&",
+      "description": "",
       "order": 12
     },
     {
       "name": "Conditional OR",
       "comment": "||",
+      "description": "",
       "order": 13
     },
     {
       "name": "Ternary operators",
       "comment": "boolean expression ? expression1 : expression2",
+      "description": "",
       "order": 14
     },
     {
       "name": "Assignment operators",
       "comment": "=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=",
+      "description": "",
       "order": 15
     },
     {
       "name": "Arrow operator",
       "comment": "->",
+      "description": "",
       "order": 16
     }
   ]
