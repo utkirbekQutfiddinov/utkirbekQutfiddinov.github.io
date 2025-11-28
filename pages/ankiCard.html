@@ -1,0 +1,267 @@
+<!doctype html>
+<!--
+Simple Anki-like flashcards page for GitHub Pages.
+Features:
+- Flip card (click or Space)
+- Next / Prev (arrow keys or buttons)
+- Add / Edit / Delete cards
+- Shuffle / Reset / Progress
+- Import / Export JSON
+- Persists to localStorage
+
+To deploy: save this file as index.html in the repository's root or docs/ and enable GitHub Pages.
+
+Made by Utkirbek using ChatGPT.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anki-style Flashcards</title>
+    <style>
+        :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.04)}
+        *{box-sizing:border-box}
+        html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+        body{background:linear-gradient(180deg,var(--bg),#071124);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:28px}
+        .app{width:100%;max-width:980px}
+        header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+        header h1{font-size:20px;margin:0}
+        .controls{display:flex;gap:8px;flex-wrap:wrap}
+        button, .file-input{background:var(--glass);border:1px solid rgba(255,255,255,0.06);color:inherit;padding:8px 12px;border-radius:10px;cursor:pointer}
+        button:active{transform:translateY(1px)}
+
+        .board{display:grid;grid-template-columns:1fr 320px;gap:18px}
+        .card-wrap{display:flex;align-items:center;justify-content:center;min-height:360px}
+        .card{width:100%;max-width:720px;height:360px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:14px;padding:28px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;box-shadow:0 8px 30px rgba(2,6,23,0.7);border:1px solid rgba(255,255,255,0.03);cursor:pointer;perspective:1000px}
+        .card-inner{width:100%;height:100%;transition:transform 400ms;transform-style:preserve-3d;display:flex;align-items:center;justify-content:center}
+        .card.flipped .card-inner{transform:rotateY(180deg)}
+        .card-face{position:absolute;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+        .front{font-size:34px;font-weight:600}
+        .back{transform:rotateY(180deg);font-size:20px;color:var(--muted)}
+
+        .side-panel{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px;min-height:360px;border:1px solid rgba(255,255,255,0.03)}
+        .side-panel h3{margin:4px 0 10px 0}
+        .controls-row{display:flex;gap:8px;margin-bottom:10px}
+        .card-list{max-height:200px;overflow:auto;padding-right:6px}
+        .card-item{padding:8px;border-radius:8px;display:flex;justify-content:space-between;gap:8px;align-items:center;border:1px solid rgba(255,255,255,0.02);margin-bottom:8px}
+        .card-item small{color:var(--muted)}
+        label{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+        input[type=text], textarea{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+        textarea{resize:vertical;min-height:66px}
+        footer{margin-top:14px;color:var(--muted);font-size:13px}
+
+        .row{display:flex;gap:8px}
+        .big{padding:10px 14px}
+        .muted{color:var(--muted)}
+
+        .progress{height:10px;background:rgba(255,255,255,0.03);border-radius:6px;overflow:hidden;margin-top:8px}
+        .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7c3aed);width:0%}
+
+        .hint{position:absolute;left:14px;bottom:12px;font-size:13px;color:var(--muted)}
+        .kbd{background:rgba(255,255,255,0.03);padding:6px;border-radius:6px;font-weight:600}
+
+        @media (max-width:880px){.board{grid-template-columns:1fr} .side-panel{order:2} .card{height:380px}}
+    </style>
+</head>
+<body>
+<div class="app">
+    <header>
+        <h1>Anki-style Flashcards</h1>
+        <div class="controls">
+            <button id="shuffleBtn">Shuffle</button>
+            <button id="resetBtn">Reset Progress</button>
+            <input id="importFile" class="file-input" type="file" accept="application/json" />
+            <button id="exportBtn">Export JSON</button>
+        </div>
+    </header>
+
+    <div class="board">
+        <section>
+            <div class="card-wrap">
+                <div class="card" id="mainCard" tabindex="0" title="Click or press Space to flip">
+                    <div class="card-inner">
+                        <div class="card-face front" id="cardFront">Loading...</div>
+                        <div class="card-face back" id="cardBack">—</div>
+                    </div>
+                    <div class="hint">Space: flip • ← / → : prev/next • D: delete</div>
+                </div>
+            </div>
+            <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+                <button id="prevBtn">← Prev</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+            <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+        </section>
+
+        <aside class="side-panel">
+            <h3>Cards <small id="count" class="muted"></small></h3>
+            <div class="card-list" id="cardList"></div>
+
+            <label>Search</label>
+            <input type="text" id="searchInput" placeholder="search front or back" />
+
+            <label>Add / Edit card</label>
+            <input type="text" id="frontInput" placeholder="Front (word)" />
+            <textarea id="backInput" placeholder="Back (definition / example)"></textarea>
+            <div class="row" style="margin-top:8px">
+                <button id="addBtn" class="big">Add</button>
+                <button id="saveEditBtn" class="big" disabled>Save Edit</button>
+                <button id="clearBtn" class="big">Clear</button>
+            </div>
+
+            <footer>
+                <div>Keyboard: <span class="kbd">Space</span> flip — <span class="kbd">←</span>/<span class="kbd">→</span> navigate — <span class="kbd">D</span> delete</div>
+                <div style="margin-top:8px">This runs fully in your browser and stores data in localStorage.</div>
+            </footer>
+        </aside>
+    </div>
+</div>
+
+<script>
+    // LocalStorage key
+    const LS_KEY = 'anki_cards_v1';
+
+    // Sample cards to start with
+    const SAMPLE = [
+        {front:'aberration', back:'a departure from what is normal, usual, or expected; an anomaly'},
+        {front:'ephemeral', back:'lasting for a very short time'},
+        {front:'lucid', back:'expressed clearly; easy to understand; or mentally clear'}
+    ];
+
+    // State
+    let cards = [];
+    let idx = 0;
+    let flipped = false;
+    let filtered = null; // filtered index mapping
+    let editingId = null;
+
+    // Elements
+    const cardFront = document.getElementById('cardFront');
+    const cardBack = document.getElementById('cardBack');
+    const mainCard = document.getElementById('mainCard');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const addBtn = document.getElementById('addBtn');
+    const saveEditBtn = document.getElementById('saveEditBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const frontInput = document.getElementById('frontInput');
+    const backInput = document.getElementById('backInput');
+    const cardList = document.getElementById('cardList');
+    const countEl = document.getElementById('count');
+    const progressBar = document.getElementById('progressBar');
+    const importFile = document.getElementById('importFile');
+    const exportBtn = document.getElementById('exportBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    // Helpers
+    function save() { localStorage.setItem(LS_KEY, JSON.stringify(cards)); }
+    function load(){ try{ const v = JSON.parse(localStorage.getItem(LS_KEY)); return Array.isArray(v)?v:SAMPLE.slice(); }catch(e){return SAMPLE.slice()} }
+    function resetProgress(){ idx = 0; flipped=false; render(); }
+
+    function render(){
+        if(!cards.length){ cardFront.textContent = 'No cards. Add one on the right.'; cardBack.textContent=''; countEl.textContent=''; updateProgress(); renderList(); return }
+        const currentIndex = mapIndex(idx);
+        const c = cards[currentIndex];
+        cardFront.textContent = c.front || '(empty)';
+        cardBack.textContent = c.back || '(empty)';
+        document.querySelectorAll('.card-item').forEach(el=>el.classList.remove('active'));
+        const listItem = document.querySelector(`[data-id="${currentIndex}"]`);
+        if(listItem) listItem.classList.add('active');
+        countEl.textContent = ` — ${idx+1}/${getCount()}`;
+        updateProgress();
+        mainCard.classList.toggle('flipped', flipped);
+    }
+
+    function getCount(){ return filtered?filtered.length:cards.length }
+    function mapIndex(viewIdx){ return filtered ? filtered[viewIdx] : viewIdx }
+
+    function next(){ if(getCount()===0) return; idx = (idx+1) % getCount(); flipped=false; render(); }
+    function prev(){ if(getCount()===0) return; idx = (idx-1 + getCount())%getCount(); flipped=false; render(); }
+
+    function updateProgress(){ const total = getCount(); const percent = total?Math.round(((idx+1)/total)*100):0; progressBar.style.width = percent + '%'; }
+
+    function renderList(){ cardList.innerHTML=''; cards.forEach((c,i)=>{
+        const el = document.createElement('div'); el.className='card-item'; el.dataset.id = i;
+        el.innerHTML = `<div><strong>${escapeHtml(c.front)}</strong><div><small class='muted'>${escapeHtml(c.back).slice(0,80)}</small></div></div>
+        <div style='display:flex;flex-direction:column;gap:6px;align-items:flex-end'>
+          <div style='display:flex;gap:6px'><button data-act='goto'>Go</button><button data-act='edit'>Edit</button></div>
+          <small class='muted'>#${i+1}</small>
+        </div>`;
+        cardList.appendChild(el);
+    });
+
+        // add handlers
+        cardList.querySelectorAll('button').forEach(b=>{
+            const act = b.dataset.act; const el = b.closest('.card-item');
+            b.addEventListener('click', ()=>{
+                const id = Number(el.dataset.id);
+                if(act==='goto'){ if(filtered){ idx = filtered.indexOf(id); if(idx<0) idx=0 } else idx = id; flipped=false; render(); }
+                if(act==='edit'){ editingId = id; frontInput.value = cards[id].front; backInput.value = cards[id].back; saveEditBtn.disabled=false; addBtn.disabled=true }
+            });
+        });
+    }
+
+    // CRUD
+    function addCard(){ const f = frontInput.value.trim(); const b = backInput.value.trim(); if(!f && !b) return alert('Enter front or back'); cards.push({front:f, back:b}); save(); frontInput.value=''; backInput.value=''; editingId=null; saveEditBtn.disabled=true; addBtn.disabled=false; renderList(); idx = getCount()-1; render(); }
+    function saveEdit(){ if(editingId===null) return; cards[editingId].front = frontInput.value.trim(); cards[editingId].back = backInput.value.trim(); save(); editingId=null; saveEditBtn.disabled=true; addBtn.disabled=false; frontInput.value=''; backInput.value=''; renderList(); render(); }
+    function clearForm(){ editingId=null; frontInput.value=''; backInput.value=''; saveEditBtn.disabled=true; addBtn.disabled=false }
+
+    // Utility
+    function escapeHtml(s){ if(!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    // Shuffle (Fisher-Yates) while keeping original array order intact? We shuffle in-place and save
+    function shuffle(){ for(let i=cards.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [cards[i],cards[j]]=[cards[j],cards[i]] } save(); filtered=null; idx=0; renderList(); render(); }
+
+    // Import / Export
+    function exportJSON(){ const blob = new Blob([JSON.stringify(cards, null, 2)],{type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='flashcards.json'; a.click(); URL.revokeObjectURL(url); }
+    function handleFile(file){ const reader = new FileReader(); reader.onload = e=>{ try{ const data = JSON.parse(e.target.result); if(!Array.isArray(data)) throw new Error('Not array'); // basic
+        // map to expected shape
+        cards = data.map(x=>({front:String(x.front||''), back:String(x.back||'')})); save(); filtered=null; idx=0; renderList(); render(); alert('Imported ' + cards.length + ' cards');
+    }catch(err){ alert('Invalid file: '+err.message) } }
+        reader.readAsText(file);
+    }
+
+    // Search
+    function doSearch(q){ q = (q||'').trim().toLowerCase(); if(!q){ filtered = null; idx=0; renderList(); render(); return };
+        filtered = [];
+        cards.forEach((c,i)=>{ if((c.front||'').toLowerCase().includes(q) || (c.back||'').toLowerCase().includes(q)) filtered.push(i) });
+        idx = 0; renderList(); render(); }
+
+    // Delete current card
+    function deleteCurrent(){ if(getCount()===0) return; const real = mapIndex(idx); if(!confirm('Delete this card?')) return; cards.splice(real,1); save(); filtered=null; idx = Math.max(0, Math.min(idx, getCount()-1)); renderList(); render(); }
+
+    // Keyboard
+    document.addEventListener('keydown', (e)=>{
+        if(e.target.tagName==='INPUT' || e.target.tagName==='TEXTAREA') return;
+        if(e.code==='Space'){ e.preventDefault(); flipped=!flipped; render(); }
+        if(e.key==='ArrowRight') next();
+        if(e.key==='ArrowLeft') prev();
+        if(e.key==='d' || e.key==='D') deleteCurrent();
+    });
+
+    // Click to flip
+    mainCard.addEventListener('click', ()=>{ flipped = !flipped; render(); });
+
+    // Buttons
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    shuffleBtn.addEventListener('click', ()=>{ if(!confirm('Shuffle and overwrite order?')) return; shuffle(); });
+    resetBtn.addEventListener('click', ()=>{ if(!confirm('Reset progress & go to first card?')) return; resetProgress(); });
+    addBtn.addEventListener('click', addCard);
+    saveEditBtn.addEventListener('click', saveEdit);
+    clearBtn.addEventListener('click', clearForm);
+    exportBtn.addEventListener('click', exportJSON);
+    importFile.addEventListener('change', (ev)=>{ if(ev.target.files.length) handleFile(ev.target.files[0]); ev.target.value=''; });
+    searchInput.addEventListener('input', e=>{ doSearch(e.target.value) });
+
+    // Load initial
+    cards = load(); if(!cards || !cards.length){ cards = SAMPLE.slice(); save(); }
+    renderList(); render();
+
+    // small helper: go to next when flipped true and click reveal
+    // (Optional) double-click on back to mark known? Not implemented.
+</script>
+</body>
+</html>
