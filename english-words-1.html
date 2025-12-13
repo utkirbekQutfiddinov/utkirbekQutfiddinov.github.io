@@ -118,20 +118,19 @@ Made by Utkirbek using ChatGPT.
 </div>
 
 <script>
+    
+    // Sample cards to start with
+    const SAMPLE = [];
+fetch('./files/tests/essential-1.json')
+        .then(response => {
+            return response.text();
+        })
+        .then(text => JSON.parse(text))
+        .then(data => SAMPLE=data);
+    
     // LocalStorage key
     const LS_KEY = 'anki_cards_v1';
 
-    // Sample cards to start with
-    const SAMPLE = [
-        {
-    "front": "afraid",
-    "back": "When someone is afraid, they feel fear"
-  },
-  {
-    "front": "agree",
-    "back": "To agree is to say “yes” or to think the same way"
-  }
-    ];
 
     // State
     let cards = [
