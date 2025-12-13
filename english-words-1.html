@@ -162,7 +162,9 @@ Made by Utkirbek using ChatGPT.
     const searchInput = document.getElementById('searchInput');
 
     // Helpers
-    function save() { localStorage.setItem(LS_KEY, JSON.stringify(cards)); }
+    function save() { 
+        //localStorage.setItem(LS_KEY, JSON.stringify(cards)); 
+    }
     function load(){ try{ const v = JSON.parse(localStorage.getItem(LS_KEY)); return Array.isArray(v)?v:SAMPLE.slice(); }catch(e){return SAMPLE.slice()} }
     function resetProgress(){ idx = 0; flipped=false; render(); }
 
