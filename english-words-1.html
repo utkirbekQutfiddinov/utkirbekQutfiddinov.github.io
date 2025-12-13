@@ -121,12 +121,6 @@ Made by Utkirbek using ChatGPT.
     
     // Sample cards to start with
     var SAMPLE = [];
-fetch('./files/tests/essential-1.json')
-        .then(response => {
-            return response.text();
-        })
-        .then(text => JSON.parse(text))
-        .then(data => SAMPLE=data);
     
     // LocalStorage key
     const LS_KEY = 'anki_cards_v1';
@@ -135,6 +129,44 @@ fetch('./files/tests/essential-1.json')
     // State
     let cards = [
     ];
+    function initializeApp(fetchedData) {
+        if (fetchedData && fetchedData.length) {
+            // **THIS IS THE KEY ASSIGNMENT:**
+            cards = fetchedData; 
+        } else {
+            // Fallback if the file was empty or loading failed
+            cards = [{ front: "Welcome!", back: "Failed to load external data, starting with sample. Check console for errors." }];
+        }
+        
+        renderList();
+        render();
+    }
+
+
+    // --- Asynchronous Data Loading and App Start ---
+
+    // 1. Fetch the JSON file
+    fetch('./files/tests/essential-1.json')
+        .then(response => {
+            // 2. Check for success (e.g., status 200)
+            if (!response.ok) {
+                // If the file is not found (404) or another error, throw an error
+                throw new Error(`Failed to load essential-1.json: ${response.status} ${response.statusText}`);
+            }
+            // 3. Parse the JSON body
+            return response.json(); 
+        })
+        .then(data => {
+            // 4. Data is successfully loaded as a JavaScript array.
+            // Start the application with this data.
+            initializeApp(data);
+        })
+        .catch(error => {
+            // 5. Handle any loading/parsing errors
+            console.error("Error during card loading:", error);
+            // Start app with empty/fallback data so the user sees something
+            initializeApp([]); 
+        });
     let idx = 0;
     let flipped = false;
     let filtered = null; // filtered index mapping
