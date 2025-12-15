@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Flashcards</title>
+    <title>3600 Essential English words</title>
     <style>
         /* Reduced CSS to only support the main card view */
         :root {
@@ -195,7 +195,6 @@
 <!--                <option value="./files/tests/essential-2.json">Words [601-1200]</option>-->
             </select>
             <button id="shuffleBtn">Shuffle</button>
-            <button id="resetBtn">Reset Progress</button>
         </div>
     </header>
 
@@ -240,7 +239,6 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const shuffleBtn = document.getElementById('shuffleBtn');
-    const resetBtn = document.getElementById('resetBtn');
     const progressBar = document.getElementById('progressBar');
     // NEW Element
     const fileSelect = document.getElementById('fileSelect');
@@ -291,12 +289,6 @@
             [cards[i], cards[j]] = [cards[j], cards[i]]
         }
         idx = 0;
-        render();
-    }
-
-    function resetProgress() {
-        idx = 0;
-        flipped = false;
         render();
     }
 
@@ -383,9 +375,6 @@
     prevBtn.addEventListener('click', prev);
     shuffleBtn.addEventListener('click', () => {
         if (confirm('Shuffle all cards?')) shuffle();
-    });
-    resetBtn.addEventListener('click', () => {
-        if (confirm('Reset progress & go to first card?')) resetProgress();
     });
 
 </script>
