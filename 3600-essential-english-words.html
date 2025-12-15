@@ -186,7 +186,6 @@
             <select id="bookSelect" title="Select Book"></select>
             <select id="unitSelect" title="Select Unit" disabled></select>
             <button id="shuffleBtn">Shuffle</button>
-            <button id="resetBtn">Reset Progress</button>
         </div>
     </header>
 
@@ -236,7 +235,6 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const shuffleBtn = document.getElementById('shuffleBtn');
-    const resetBtn = document.getElementById('resetBtn');
     const progressBar = document.getElementById('progressBar');
     const bookSelect = document.getElementById('bookSelect');
     const unitSelect = document.getElementById('unitSelect');
@@ -282,12 +280,6 @@
             [cards[i], cards[j]] = [cards[j], cards[i]]
         }
         idx = 0;
-        render();
-    }
-
-    function resetProgress() {
-        idx = 0;
-        flipped = false;
         render();
     }
 
@@ -418,9 +410,6 @@
     prevBtn.addEventListener('click', prev);
     shuffleBtn.addEventListener('click', () => {
         if (confirm('Shuffle all cards?')) shuffle();
-    });
-    resetBtn.addEventListener('click', () => {
-        if (confirm('Reset progress & go to first card?')) resetProgress();
     });
 
 </script>
