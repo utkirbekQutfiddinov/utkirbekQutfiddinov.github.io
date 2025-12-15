@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>3600 Essential English words</title>
     <style>
-        /* Reduced CSS to only support the main card view */
         :root {
             --bg: #0f1724;
             --card: #0b1220;
@@ -46,7 +45,6 @@
             flex-wrap: wrap;
         }
 
-        /* Added flex-wrap for mobile */
         header h1 {
             font-size: 20px;
             margin: 0
@@ -61,24 +59,19 @@
 
         select {
             background: var(--glass);
-            border: 1px solid rgba(255,255,255,0.06);
-            color: inherit; /* Keeps text light on the button itself */
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: inherit;
             padding: 8px 12px;
             border-radius: 10px;
             cursor: pointer;
             -webkit-appearance: none;
             appearance: none;
-
-            /* IMPORTANT: This forces the default system dropdown colors */
-            /* It ensures the options menu uses standard system white/black */
             background-color: transparent;
         }
 
-        /* Target the options within the dropdown */
         select option {
-            /* Set explicit colors for the dropdown menu items */
-            background-color: white; /* White background for the menu items */
-            color: black;            /* Black text for the menu items */
+            background-color: white;
+            color: black;
         }
 
         button {
@@ -190,11 +183,10 @@
     <header>
         <h1>Flashcards</h1>
         <div class="controls">
-            <select id="fileSelect">
-                <option value="./files/tests/essential-1.json">Words [1-600]</option>
-<!--                <option value="./files/tests/essential-2.json">Words [601-1200]</option>-->
-            </select>
+            <select id="bookSelect" title="Select Book"></select>
+            <select id="unitSelect" title="Select Unit" disabled></select>
             <button id="shuffleBtn">Shuffle</button>
+            <button id="resetBtn">Reset Progress</button>
         </div>
     </header>
 
@@ -203,7 +195,7 @@
             <div class="card-wrap">
                 <div class="card" id="mainCard" tabindex="0" title="Click or press Space to flip">
                     <div class="card-inner">
-                        <div class="card-face front" id="cardFront">Loading...</div>
+                        <div class="card-face front" id="cardFront">Select a Book and Unit</div>
                         <div class="card-face back" id="cardBack">—</div>
                     </div>
                     <div class="hint">Space: flip • ← / → : prev/next</div>
@@ -226,38 +218,40 @@
 </div>
 
 <script>
+    const UNITS = 30;
 
-    // --- State Variables ---
-    let cards = []; // Holds the fetched card data
-    let idx = 0;  // Current card index
-    let flipped = false; // Card flip state
+    const BOOK_OPTIONS = [
+        {name: "Book 1", path: "./files/tests/english/vocabulary/essential-1.json", totalWords: 600},
+        {name: "Book 2", path: "./files/tests/english/vocabulary/essential-2.json", totalWords: 600}
+    ];
 
-    // --- Elements ---
+    let CURRENT_BOOK_CACHE = null;
+    let cards = [];
+    let idx = 0;
+    let flipped = false;
+
     const cardFront = document.getElementById('cardFront');
     const cardBack = document.getElementById('cardBack');
     const mainCard = document.getElementById('mainCard');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const shuffleBtn = document.getElementById('shuffleBtn');
+    const resetBtn = document.getElementById('resetBtn');
     const progressBar = document.getElementById('progressBar');
-    // NEW Element
-    const fileSelect = document.getElementById('fileSelect');
+    const bookSelect = document.getElementById('bookSelect');
+    const unitSelect = document.getElementById('unitSelect');
 
-
-    // --- Core Functions ---
 
     function render() {
         if (!cards.length) {
-            cardFront.textContent = 'No cards loaded. Check console for error.';
+            cardFront.textContent = 'Please select a Unit.';
             cardBack.textContent = '';
             updateProgress();
             return
         }
-
         const c = cards[idx];
         cardFront.textContent = c.front || '(empty)';
         cardBack.textContent = c.back || '(empty)';
-
         updateProgress();
         mainCard.classList.toggle('flipped', flipped);
     }
@@ -283,7 +277,6 @@
     }
 
     function shuffle() {
-        // Fisher-Yates shuffle in place
         for (let i = cards.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [cards[i], cards[j]] = [cards[j], cards[i]]
@@ -292,20 +285,21 @@
         render();
     }
 
-
-    // --- Application Initialization / Data Loading ---
-
-    // Unified function to load data from any path
-    function loadCards(filePath) {
-        // Reset state and show loading message immediately
-        cards = [];
+    function resetProgress() {
         idx = 0;
         flipped = false;
-        cardFront.textContent = 'Loading...';
-        cardBack.textContent = 'Please wait';
+        render();
+    }
+
+
+    function fetchAndCacheBook(filePath) {
+        CURRENT_BOOK_CACHE = null;
+        unitSelect.disabled = true;
+        cardFront.textContent = 'Loading Book...';
+        cardBack.textContent = 'Please wait for file download.';
         updateProgress();
 
-        fetch(filePath)
+        return fetch(filePath)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Failed to load JSON: ${response.status} ${response.statusText}`);
@@ -313,47 +307,100 @@
                 return response.json();
             })
             .then(data => {
-                // Data loaded successfully. Initialize the application.
-                initializeApp(data);
+                CURRENT_BOOK_CACHE = data;
+                unitSelect.disabled = false;
+                return true;
             })
             .catch(error => {
-                console.error("Error during card loading:", error);
-                // Start app with fallback error message
+                console.error("Error loading book:", error);
+                unitSelect.disabled = true;
                 initializeApp([]);
+                return false;
             });
     }
 
-    // This runs only AFTER the JSON data has successfully loaded.
-    function initializeApp(fetchedData) {
-        if (fetchedData && fetchedData.length) {
-            cards = fetchedData;
-        } else {
-            // Fallback for an empty or failed load
-            cards = [{
-                front: "Load Error",
-                back: "Could not load data. Check the console and file path."
-            }];
+    function loadUnitFromCache(unitValue) {
+        if (!CURRENT_BOOK_CACHE) {
+            console.error("Cache is empty. Select a Book first.");
+            return;
         }
 
-        shuffle(); // Initial shuffle and render
+        const [startStr, endStr] = unitValue.split('|');
+        const startIdx = parseInt(startStr, 10);
+        const endIdx = parseInt(endStr, 10);
+
+        const unitData = CURRENT_BOOK_CACHE.slice(startIdx, endIdx);
+        initializeApp(unitData);
     }
 
-    // --- Initial Setup and Event Listeners ---
+    function initializeApp(fetchedData) {
+        cards = fetchedData && fetchedData.length ? fetchedData : [{
+            front: "Error/No Cards",
+            back: "Could not load data. Select a Book and Unit."
+        }];
+        idx = 0;
+        flipped = false;
+        shuffle();
+    }
 
-    // 1. Populate the select tag (Optional, but good practice if you used FILE_OPTIONS array)
-    // Removed this step since the <select> is hardcoded in HTML, simplifying setup.
+    function populateBookSelect() {
+        bookSelect.innerHTML = '';
+        BOOK_OPTIONS.forEach((book, index) => {
+            const option = document.createElement('option');
+            option.textContent = book.name;
+            option.value = book.path;
+            option.dataset.totalWords = book.totalWords;
+            bookSelect.appendChild(option);
+        });
+    }
 
-    // 2. Attach listener for when the user changes the file
-    fileSelect.addEventListener('change', (e) => {
-        loadCards(e.target.value);
+    function populateUnitSelect(totalWords) {
+        unitSelect.innerHTML = '';
+
+        const allOption = document.createElement('option');
+        allOption.textContent = `All Cards (1–${totalWords})`;
+        allOption.value = `0|${totalWords}`;
+        unitSelect.appendChild(allOption);
+
+        const wordsPerUnit = totalWords / UNITS;
+        if (!Number.isInteger(wordsPerUnit)) {
+            console.error(`Total words (${totalWords}) is not divisible by ${UNITS}. Check book configuration.`);
+            return;
+        }
+
+        for (let i = 0; i < UNITS; i++) {
+            const startIdx = i * wordsPerUnit;
+            const endIdx = startIdx + wordsPerUnit;
+            const option = document.createElement('option');
+            option.textContent = `Unit ${i + 1} (${startIdx + 1}–${endIdx})`;
+            option.value = `${startIdx}|${endIdx}`;
+            unitSelect.appendChild(option);
+        }
+    }
+
+
+    bookSelect.addEventListener('change', (e) => {
+        const selectedBookPath = e.target.value;
+        const totalWords = parseInt(e.target.options[e.target.selectedIndex].dataset.totalWords, 10);
+
+        populateUnitSelect(totalWords);
+
+        fetchAndCacheBook(selectedBookPath)
+            .then(success => {
+                if (success) {
+                    loadUnitFromCache(unitSelect.value);
+                }
+            });
     });
 
-    // 3. Initial load using the default selected option
-    loadCards(fileSelect.value);
+    unitSelect.addEventListener('change', (e) => {
+        loadUnitFromCache(e.target.value);
+    });
 
-    // --- Other Event Listeners ---
+    populateBookSelect();
 
-    // Keyboard controls
+    bookSelect.dispatchEvent(new Event('change'));
+
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
             e.preventDefault();
@@ -363,18 +410,17 @@
         if (e.key === 'ArrowRight') next();
         if (e.key === 'ArrowLeft') prev();
     });
-
-    // Click to flip
     mainCard.addEventListener('click', () => {
         flipped = !flipped;
         render();
     });
-
-    // Buttons
     nextBtn.addEventListener('click', next);
     prevBtn.addEventListener('click', prev);
     shuffleBtn.addEventListener('click', () => {
         if (confirm('Shuffle all cards?')) shuffle();
+    });
+    resetBtn.addEventListener('click', () => {
+        if (confirm('Reset progress & go to first card?')) resetProgress();
     });
 
 </script>
