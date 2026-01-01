@@ -1,0 +1,2402 @@
+[
+  {
+    "front": "afraid",
+    "back": "Feeling fear; frightened."
+  },
+  {
+    "front": "agree",
+    "back": "To have the same opinion as someone else; to consent."
+  },
+  {
+    "front": "angry",
+    "back": "Having a strong feeling of annoyance, displeasure, or hostility."
+  },
+  {
+    "front": "arrive",
+    "back": "To reach a place, especially at the end of a journey."
+  },
+  {
+    "front": "attack",
+    "back": "To act violently against someone or something; to try to hurt or defeat."
+  },
+  {
+    "front": "bottom",
+    "back": "The lowest part, point, or surface of something."
+  },
+  {
+    "front": "clever",
+    "back": "Quick at learning and understanding things; smart."
+  },
+  {
+    "front": "cruel",
+    "back": "Causing pain or suffering to others, or feeling no concern about it."
+  },
+  {
+    "front": "finally",
+    "back": "After a long time, typically in the end."
+  },
+  {
+    "front": "hide",
+    "back": "To put or keep someone or something out of sight."
+  },
+  {
+    "front": "hunt",
+    "back": "To chase and kill wild animals for food or sport."
+  },
+  {
+    "front": "lot",
+    "back": "A large number or amount (often used as 'a lot')."
+  },
+  {
+    "front": "middle",
+    "back": "The point or position equally distant from the sides or edges of something; the center."
+  },
+  {
+    "front": "moment",
+    "back": "A very brief period of time."
+  },
+  {
+    "front": "pleased",
+    "back": "Feeling or showing satisfaction and happiness with something."
+  },
+  {
+    "front": "promise",
+    "back": "To tell someone that you will certainly do something or that something will happen."
+  },
+  {
+    "front": "reply",
+    "back": "To say or write something as an answer to someone or something."
+  },
+  {
+    "front": "safe",
+    "back": "Protected from or not exposed to danger or risk; not in danger."
+  },
+  {
+    "front": "trick",
+    "back": "A cunning or skillful act or scheme intended to deceive or outwit someone."
+  },
+  {
+    "front": "well",
+    "back": "In a good or satisfactory way; in a state of good health."
+  },
+  {
+    "front": "adventure",
+    "back": "An unusual and exciting or daring experience."
+  },
+  {
+    "front": "approach",
+    "back": "To move nearer to someone or something."
+  },
+  {
+    "front": "carefully",
+    "back": "Doing something with great attention, especially to detail or safety."
+  },
+  {
+    "front": "chemical",
+    "back": "A substance obtained by a chemical process or reaction, used for a specific purpose."
+  },
+  {
+    "front": "create",
+    "back": "To bring something into existence."
+  },
+  {
+    "front": "evil",
+    "back": "Profoundly immoral and wicked; morally bad."
+  },
+  {
+    "front": "experiment",
+    "back": "A scientific procedure carried out to make a discovery, test a hypothesis, or demonstrate a known fact."
+  },
+  {
+    "front": "kill",
+    "back": "To cause the death of a person, animal, or other living thing."
+  },
+  {
+    "front": "laboratory",
+    "back": "A room or building equipped for scientific experiments, research, or teaching."
+  },
+  {
+    "front": "laugh",
+    "back": "To make the sounds and movements of the face and body that express amusement, ridicule, or pleasure."
+  },
+  {
+    "front": "loud",
+    "back": "Producing or capable of producing much noise; easily audible."
+  },
+  {
+    "front": "nervous",
+    "back": "Easily agitated or alarmed; worried."
+  },
+  {
+    "front": "noise",
+    "back": "A sound, especially one that is loud or unpleasant or causes disturbance."
+  },
+  {
+    "front": "project",
+    "back": "A planned piece of work that is designed to achieve a particular aim."
+  },
+  {
+    "front": "scare",
+    "back": "To cause great fear or nervousness in; frighten."
+  },
+  {
+    "front": "secret",
+    "back": "Something that is kept hidden or understood only by a few people."
+  },
+  {
+    "front": "shout",
+    "back": "To utter a loud call or cry, typically in a sudden or excited way."
+  },
+  {
+    "front": "smell",
+    "back": "To perceive or detect a scent or odor with the nose."
+  },
+  {
+    "front": "terrible",
+    "back": "Extremely bad or serious; dreadful."
+  },
+  {
+    "front": "worse",
+    "back": "Of poorer quality or lower standard; more unpleasant, serious, or severe."
+  },
+  {
+    "front": "alien",
+    "back": "Belonging to a foreign country or nation; or, a fictional being from another world."
+  },
+  {
+    "front": "among",
+    "back": "Surrounded by; in the company of; or, in the middle of a group."
+  },
+  {
+    "front": "chart",
+    "back": "A sheet of information in the form of a table, graph, or diagram."
+  },
+  {
+    "front": "cloud",
+    "back": "A visible mass of condensed water vapor floating in the atmosphere, typically high above the general level of the ground."
+  },
+  {
+    "front": "comprehend",
+    "back": "To grasp mentally; understand."
+  },
+  {
+    "front": "describe",
+    "back": "To give an account in words of (someone or something), including all the relevant characteristics, qualities, or events."
+  },
+  {
+    "front": "ever",
+    "back": "At any time; always."
+  },
+  {
+    "front": "fail",
+    "back": "To be unsuccessful in achieving one's goal; to not work or function properly."
+  },
+  {
+    "front": "friendly",
+    "back": "Kind and pleasant."
+  },
+  {
+    "front": "grade",
+    "back": "A particular level of rank, quality, proficiency, or value; or, a mark indicating the quality of a student's work."
+  },
+  {
+    "front": "instead",
+    "back": "As an alternative or substitute."
+  },
+  {
+    "front": "library",
+    "back": "A building or room containing collections of books, periodicals, and sometimes films and recorded music for people to read, borrow, or refer to."
+  },
+  {
+    "front": "planet",
+    "back": "A celestial body moving in an elliptical orbit around a star."
+  },
+  {
+    "front": "report",
+    "back": "Give a spoken or written account of something that one has observed, heard, done, or investigated."
+  },
+  {
+    "front": "several",
+    "back": "More than two but not many; a few."
+  },
+  {
+    "front": "solve",
+    "back": "To find an answer to, explanation for, or means of effectively dealing with (a problem or mystery)."
+  },
+  {
+    "front": "suddenly",
+    "back": "Quickly and unexpectedly."
+  },
+  {
+    "front": "suppose",
+    "back": "To assume that something is the case on the basis of evidence or probability but without proof or certain knowledge."
+  },
+  {
+    "front": "universe",
+    "back": "All existing matter and space considered as a whole; the cosmos."
+  },
+  {
+    "front": "view",
+    "back": "The ability to see something or what can be seen from a particular place; or, an opinion or assessment."
+  },
+  {
+    "front": "appropriate",
+    "back": "Suitable or proper in the circumstances."
+  },
+  {
+    "front": "avoid",
+    "back": "To keep away from or stop oneself from doing (something)."
+  },
+  {
+    "front": "behave",
+    "back": "To act or conduct oneself in a specified way, especially toward others."
+  },
+  {
+    "front": "calm",
+    "back": "Not showing or feeling nervousness, anger, or other strong emotions; tranquil."
+  },
+  {
+    "front": "concern",
+    "back": "Worry; anxiety; or, relating to or affecting someone."
+  },
+  {
+    "front": "content",
+    "back": "In a state of peaceful happiness or satisfaction."
+  },
+  {
+    "front": "expect",
+    "back": "To regard something as likely to happen; to require or look forward to."
+  },
+  {
+    "front": "frequently",
+    "back": "Regularly or habitually; often."
+  },
+  {
+    "front": "habit",
+    "back": "A settled or regular tendency or practice, especially one that is hard to give up."
+  },
+  {
+    "front": "instruct",
+    "back": "To teach (someone) a skill or subject; or, to order or tell someone to do something."
+  },
+  {
+    "front": "issue",
+    "back": "An important topic or problem for debate or discussion; a point in question."
+  },
+  {
+    "front": "none",
+    "back": "Not any one; no people or things."
+  },
+  {
+    "front": "patient",
+    "back": "Able to accept or tolerate delays, problems, or suffering without becoming annoyed or anxious."
+  },
+  {
+    "front": "positive",
+    "back": "Consisting in or characterized by the presence rather than the absence of distinguishing features; or, optimistic and constructive."
+  },
+  {
+    "front": "punish",
+    "back": "To inflict a penalty or sanction on (someone) as retribution for an offense."
+  },
+  {
+    "front": "represent",
+    "back": "To be entitled or appointed to act or speak for (someone or something)."
+  },
+  {
+    "front": "shake",
+    "back": "To move (something) quickly and irregularly to and fro."
+  },
+  {
+    "front": "spread",
+    "back": "To open out (something) so that it covers a larger area."
+  },
+  {
+    "front": "stroll",
+    "back": "To walk in a leisurely, casual way."
+  },
+  {
+    "front": "village",
+    "back": "A group of houses and associated buildings, larger than a hamlet and smaller than a town, situated in a rural area."
+  },
+  {
+    "front": "aware",
+    "back": "Having knowledge or perception of a situation or fact."
+  },
+  {
+    "front": "badly",
+    "back": "In an unsatisfactory, inadequate, or unsuccessful way; severely or seriously."
+  },
+  {
+    "front": "belong",
+    "back": "To be the property or part of a particular person, place, or group."
+  },
+  {
+    "front": "continue",
+    "back": "To keep doing something without interruption; to carry on."
+  },
+  {
+    "front": "error",
+    "back": "A mistake; a state or condition of being wrong in conduct or judgment."
+  },
+  {
+    "front": "experience",
+    "back": "Practical contact with and observation of facts or events; or, the knowledge or skill acquired over time."
+  },
+  {
+    "front": "field",
+    "back": "An area of open land, especially one planted with crops or grass; or, an area of study or work."
+  },
+  {
+    "front": "hurt",
+    "back": "To cause physical pain or injury to; or, to feel pain or distress."
+  },
+  {
+    "front": "judgment",
+    "back": "The ability to make considered decisions or come to sensible conclusions."
+  },
+  {
+    "front": "likely",
+    "back": "Such as well might happen or be true; probable."
+  },
+  {
+    "front": "normal",
+    "back": "Conforming to a standard; usual, typical, or expected."
+  },
+  {
+    "front": "rare",
+    "back": "Not occurring very often; uncommon."
+  },
+  {
+    "front": "relax",
+    "back": "To make or become less tense, anxious, or rigid; to rest."
+  },
+  {
+    "front": "request",
+    "back": "To ask for something politely or formally."
+  },
+  {
+    "front": "reside",
+    "back": "To have one's permanent home in a particular place."
+  },
+  {
+    "front": "result",
+    "back": "A consequence, effect, or outcome of something."
+  },
+  {
+    "front": "roll",
+    "back": "To move in a particular direction by turning over and over on an axis."
+  },
+  {
+    "front": "since",
+    "back": "In the intervening period between (the time mentioned) and the present; or, because (reason)."
+  },
+  {
+    "front": "visible",
+    "back": "Able to be seen."
+  },
+  {
+    "front": "wild",
+    "back": "Living in a state of nature; not tamed or domesticated; or, uncontrolled and untamed."
+  },
+  {
+    "front": "advantage",
+    "back": "A condition or circumstance that puts one in a favorable or superior position."
+  },
+  {
+    "front": "cause",
+    "back": "A person or thing that gives rise to an action, phenomenon, or condition."
+  },
+  {
+    "front": "choice",
+    "back": "An act of selecting or making a decision when faced with two or more possibilities."
+  },
+  {
+    "front": "community",
+    "back": "A group of people living in the same place or having a particular characteristic in common."
+  },
+  {
+    "front": "dead",
+    "back": "No longer alive."
+  },
+  {
+    "front": "distance",
+    "back": "The length of the space between two points or places."
+  },
+  {
+    "front": "escape",
+    "back": "To break free from confinement or control; to get away."
+  },
+  {
+    "front": "face",
+    "back": "The front part of a person's head; or, to confront and deal with something."
+  },
+  {
+    "front": "follow",
+    "back": "To move or travel behind (someone or something); or, to conform to (a rule or advice)."
+  },
+  {
+    "front": "fright",
+    "back": "A sudden intense feeling of fear."
+  },
+  {
+    "front": "ghost",
+    "back": "An apparition of a dead person which is believed to appear or become manifest to the living."
+  },
+  {
+    "front": "individual",
+    "back": "A single human being as distinct from a group; separate and distinct."
+  },
+  {
+    "front": "pet",
+    "back": "A domesticated animal kept for companionship or amusement."
+  },
+  {
+    "front": "reach",
+    "back": "To stretch out an arm in a specified direction in order to touch or grasp something; or, to arrive at a place."
+  },
+  {
+    "front": "return",
+    "back": "To come or go back to a former place or state."
+  },
+  {
+    "front": "survive",
+    "back": "To remain alive after a difficult event; to continue to live or exist."
+  },
+  {
+    "front": "upset",
+    "back": "To make (someone) unhappy, disappointed, or worried; or, to suddenly overturn (something)."
+  },
+  {
+    "front": "voice",
+    "back": "The sound produced in a person's larynx and uttered through the mouth, as speech or song."
+  },
+  {
+    "front": "weather",
+    "back": "The state of the atmosphere at a place and time regarding heat, dryness, sunshine, wind, rain, etc."
+  },
+  {
+    "front": "wise",
+    "back": "Having or showing experience, knowledge, and good judgment."
+  },
+  {
+    "front": "allow",
+    "back": "To permit (someone) to do something; or, to let happen."
+  },
+  {
+    "front": "announce",
+    "back": "To make a public statement about a fact, occurrence, or intention."
+  },
+  {
+    "front": "beside",
+    "back": "Next to or at the side of."
+  },
+  {
+    "front": "challenge",
+    "back": "A call to someone to participate in a competitive situation or fight to decide who is superior; or, a task that tests one's abilities."
+  },
+  {
+    "front": "claim",
+    "back": "To state or assert that something is true, often without proof; or, to formally request or demand a title or right."
+  },
+  {
+    "front": "condition",
+    "back": "The state of something, especially regarding its appearance, quality, or working order."
+  },
+  {
+    "front": "contribute",
+    "back": "To give (something, especially money or time) in order to help achieve or provide something; or, to help cause or bring about."
+  },
+  {
+    "front": "difference",
+    "back": "A point or way in which people or things are not the same."
+  },
+  {
+    "front": "divide",
+    "back": "To separate into parts or shares; or, to distribute or allocate."
+  },
+  {
+    "front": "expert",
+    "back": "A person who has a comprehensive and authoritative knowledge of or skill in a particular area."
+  },
+  {
+    "front": "famous",
+    "back": "Known about by many people."
+  },
+  {
+    "front": "force",
+    "back": "Strength or energy as an attribute of physical action or movement; or, to make someone do something against their will."
+  },
+  {
+    "front": "harm",
+    "back": "Physical injury, especially that which is deliberately inflicted; damage."
+  },
+  {
+    "front": "lay",
+    "back": "To put something down gently or carefully."
+  },
+  {
+    "front": "peace",
+    "back": "Freedom from disturbance; tranquility; or, a period of mutual agreement between countries."
+  },
+  {
+    "front": "prince",
+    "back": "A male member of a royal family, especially a son of the monarch."
+  },
+  {
+    "front": "protect",
+    "back": "To keep safe from harm or injury."
+  },
+  {
+    "front": "sense",
+    "back": "A faculty by which the body perceives an external stimulus (e.g., sight, smell); or, a reasonable or practical idea."
+  },
+  {
+    "front": "sudden",
+    "back": "Occurring or done quickly and unexpectedly."
+  },
+  {
+    "front": "therefore",
+    "back": "For that reason; consequently."
+  },
+  {
+    "front": "accept",
+    "back": "To take or receive (something offered); or, to agree to."
+  },
+  {
+    "front": "arrange",
+    "back": "To put things in a neat, attractive, or required order."
+  },
+  {
+    "front": "attend",
+    "back": "To be present at (an event, meeting, or institution)."
+  },
+  {
+    "front": "balance",
+    "back": "A state where things are of equal weight or force; or, to keep or put in a steady position."
+  },
+  {
+    "front": "contrast",
+    "back": "The state of being strikingly different from something else, typically something in close association."
+  },
+  {
+    "front": "encourage",
+    "back": "To give support, confidence, or hope to (someone)."
+  },
+  {
+    "front": "familiar",
+    "back": "Well known from long or close association."
+  },
+  {
+    "front": "grab",
+    "back": "To seize suddenly and roughly."
+  },
+  {
+    "front": "hang",
+    "back": "To suspend or be suspended from above."
+  },
+  {
+    "front": "huge",
+    "back": "Extremely large."
+  },
+  {
+    "front": "necessary",
+    "back": "Required to be done, achieved, or present; essential."
+  },
+  {
+    "front": "pattern",
+    "back": "A repeated decorative design; or, a regular, repeated form or sequence."
+  },
+  {
+    "front": "propose",
+    "back": "To put forward an idea or plan for consideration or discussion."
+  },
+  {
+    "front": "purpose",
+    "back": "The reason for which something is done or created or for which something exists."
+  },
+  {
+    "front": "release",
+    "back": "To allow or enable to escape from a place of confinement or restriction."
+  },
+  {
+    "front": "require",
+    "back": "To need for a particular purpose; or, to depend on."
+  },
+  {
+    "front": "single",
+    "back": "Only one; not accompanied by others."
+  },
+  {
+    "front": "success",
+    "back": "The accomplishment of an aim or purpose."
+  },
+  {
+    "front": "tear",
+    "back": "To pull or rip (something) apart or to pieces with force; or, a drop of clear liquid secreted from the eye."
+  },
+  {
+    "front": "theory",
+    "back": "A set of principles on which the practice of an activity is based; or, a carefully thought-out explanation for a phenomenon."
+  },
+  {
+    "front": "against",
+    "back": "In opposition to; disagreeing with; or, in physical contact with."
+  },
+  {
+    "front": "beach",
+    "back": "A stretch of sand or pebbles along the edge of a body of water."
+  },
+  {
+    "front": "damage",
+    "back": "Physical harm that impairs the value, usefulness, or normal function of something."
+  },
+  {
+    "front": "discover",
+    "back": "To find (something or someone) unexpectedly or in the course of a search."
+  },
+  {
+    "front": "emotion",
+    "back": "A strong feeling such as joy, sadness, fear, or hate."
+  },
+  {
+    "front": "fix",
+    "back": "To mend or repair; or, to establish or settle definitively."
+  },
+  {
+    "front": "frank",
+    "back": "Open, honest, and direct in speech or writing, especially when dealing with unpalatable matters."
+  },
+  {
+    "front": "identify",
+    "back": "To establish or indicate who or what (someone or something) is."
+  },
+  {
+    "front": "island",
+    "back": "A piece of land surrounded by water."
+  },
+  {
+    "front": "ocean",
+    "back": "A very large expanse of sea, particularly one of the Earth's five main divisions."
+  },
+  {
+    "front": "perhaps",
+    "back": "Used to express uncertainty or possibility; maybe."
+  },
+  {
+    "front": "pleasant",
+    "back": "Giving a sense of happy satisfaction or enjoyment; agreeable."
+  },
+  {
+    "front": "prevent",
+    "back": "To keep (something) from happening or arising; to make impossible."
+  },
+  {
+    "front": "rock",
+    "back": "The solid mineral material forming part of the surface of the Earth."
+  },
+  {
+    "front": "save",
+    "back": "To keep safe or rescue (someone or something) from harm, danger, or failure."
+  },
+  {
+    "front": "step",
+    "back": "An act of lifting the foot and setting it down again in a new position, as in walking; or, a stage in a process."
+  },
+  {
+    "front": "still",
+    "back": "Not moving or making a sound; or, continuing up to the present time."
+  },
+  {
+    "front": "taste",
+    "back": "The sensation of flavor perceived in the mouth and throat on contact with a substance; or, to sample the flavor of (something)."
+  },
+  {
+    "front": "throw",
+    "back": "To propel (something) with force through the air by a movement of the arm and hand."
+  },
+  {
+    "front": "wave",
+    "back": "A ridge of water moving across the surface of a sea or lake; or, to move one's hand to and fro in greeting or as a signal."
+  },
+  {
+    "front": "benefit",
+    "back": "An advantage or profit gained from something."
+  },
+  {
+    "front": "certain",
+    "back": "Known for sure; established as a fact; or, completely convinced."
+  },
+  {
+    "front": "chance",
+    "back": "A possibility of something happening; or, an opportunity."
+  },
+  {
+    "front": "effect",
+    "back": "A change which is a result or consequence of an action or other cause."
+  },
+  {
+    "front": "essential",
+    "back": "Absolutely necessary or important; fundamental."
+  },
+  {
+    "front": "far",
+    "back": "At, to, or by a great distance."
+  },
+  {
+    "front": "focus",
+    "back": "The center of interest or activity; or, to pay particular attention to."
+  },
+  {
+    "front": "function",
+    "back": "The special purpose or activity for which a thing or person is used."
+  },
+  {
+    "front": "grass",
+    "back": "Vegetation consisting of short plants with narrow leaves, growing in fields and lawns."
+  },
+  {
+    "front": "guard",
+    "back": "A person who protects people or property; or, to watch over in order to protect or control."
+  },
+  {
+    "front": "image",
+    "back": "A representation of the external form of a person or thing in art; or, the general impression that a person, organization, or product presents to the public."
+  },
+  {
+    "front": "immediate",
+    "back": "Occurring or done at once; instant."
+  },
+  {
+    "front": "primary",
+    "back": "Of chief importance; main."
+  },
+  {
+    "front": "proud",
+    "back": "Feeling deep pleasure or satisfaction as a result of one's own achievements, the achievements of those with whom one is closely associated, or from qualities regarded as creditable."
+  },
+  {
+    "front": "remain",
+    "back": "To stay in the same place or position; or, to continue to be the same."
+  },
+  {
+    "front": "rest",
+    "back": "Cease work or movement in order to relax, refresh oneself, or recover strength; or, the remaining part of something."
+  },
+  {
+    "front": "separate",
+    "back": "Forming or considered as a unit apart or by itself; individual."
+  },
+  {
+    "front": "site",
+    "back": "An area of ground on which a town, building, or monument is constructed; a location."
+  },
+  {
+    "front": "tail",
+    "back": "The hindmost part of an animal, especially that which extends beyond the rest of the body."
+  },
+  {
+    "front": "trouble",
+    "back": "Difficulty or problems; or, to cause distress or anxiety to."
+  },
+  {
+    "front": "anymore",
+    "back": "Any longer; currently; (used in negative or question contexts)."
+  },
+  {
+    "front": "asleep",
+    "back": "In a state of sleep."
+  },
+  {
+    "front": "berry",
+    "back": "A small, rounded, juicy, pulpy fruit without a stone, such as a strawberry or raspberry."
+  },
+  {
+    "front": "collect",
+    "back": "To bring or gather together (a number of things)."
+  },
+  {
+    "front": "compete",
+    "back": "To strive against others to achieve an objective or superiority."
+  },
+  {
+    "front": "conversation",
+    "back": "A talk, especially an informal one, between two or more people, in which news and ideas are exchanged."
+  },
+  {
+    "front": "creature",
+    "back": "An animal, as distinct from a human being."
+  },
+  {
+    "front": "decision",
+    "back": "A conclusion or resolution reached after consideration."
+  },
+  {
+    "front": "either",
+    "back": "One or the other of two; used before two or more alternatives linked by 'or'."
+  },
+  {
+    "front": "forest",
+    "back": "A large area covered chiefly with trees and undergrowth."
+  },
+  {
+    "front": "ground",
+    "back": "The solid surface of the earth."
+  },
+  {
+    "front": "introduce",
+    "back": "To bring (something, especially a custom, practice, or law) into use or existence for the first time."
+  },
+  {
+    "front": "marry",
+    "back": "To join in marriage; to become the husband or wife of."
+  },
+  {
+    "front": "prepare",
+    "back": "To make (something) ready for use or consideration; or, to get ready."
+  },
+  {
+    "front": "sail",
+    "back": "To travel in a boat or ship, often using sails."
+  },
+  {
+    "front": "serious",
+    "back": "Acting or speaking sincerely and in earnest; or, important and significant."
+  },
+  {
+    "front": "spend",
+    "back": "To pass time; or, to give money to pay for goods or services."
+  },
+  {
+    "front": "strange",
+    "back": "Unusual or surprising; difficult to understand or explain."
+  },
+  {
+    "front": "truth",
+    "back": "The quality or state of being true; what is consistent with fact or reality."
+  },
+  {
+    "front": "wake",
+    "back": "To emerge or cause to emerge from a state of sleep."
+  },
+  {
+    "front": "alone",
+    "back": "Having no one else present; on one's own."
+  },
+  {
+    "front": "apartment",
+    "back": "A set of rooms for living in, usually on one floor of a building."
+  },
+  {
+    "front": "article",
+    "back": "A piece of writing included with others in a newspaper, magazine, or other publication; or, an object or item."
+  },
+  {
+    "front": "artist",
+    "back": "A person who creates paintings, drawings, or sculptures as a profession or hobby."
+  },
+  {
+    "front": "attitude",
+    "back": "A settled way of thinking or feeling about someone or something, typically one that is reflected in a person's behavior."
+  },
+  {
+    "front": "compare",
+    "back": "To estimate, measure, or note the similarity or dissimilarity between two or more things."
+  },
+  {
+    "front": "judge",
+    "back": "A public officer appointed to decide cases in a law court; or, to form an opinion or conclusion about."
+  },
+  {
+    "front": "magazine",
+    "back": "A periodical publication containing articles and illustrations, often on a particular subject."
+  },
+  {
+    "front": "material",
+    "back": "The matter from which a thing is or can be made; or, cloth or fabric."
+  },
+  {
+    "front": "meal",
+    "back": "An occasion when food is eaten, typically at a fixed time."
+  },
+  {
+    "front": "method",
+    "back": "A particular procedure for accomplishing or approaching something, especially a systematic or established one."
+  },
+  {
+    "front": "neighbor",
+    "back": "A person living next door to or very near to the speaker or person referred to."
+  },
+  {
+    "front": "professional",
+    "back": "Relating to or belonging to a profession; or, a person engaged in a specified activity as one's main paid occupation."
+  },
+  {
+    "front": "profit",
+    "back": "A financial gain, especially the difference between the amount earned and the amount spent in buying, operating, or producing something."
+  },
+  {
+    "front": "quality",
+    "back": "The standard of something as measured against other things of a similar kind; the degree of excellence of something."
+  },
+  {
+    "front": "shape",
+    "back": "The external form or appearance characteristic of someone or something; outline."
+  },
+  {
+    "front": "space",
+    "back": "A continuous area or expanse which is free, available, or unoccupied."
+  },
+  {
+    "front": "stair",
+    "back": "A set of steps leading from one floor or level to another."
+  },
+  {
+    "front": "symbol",
+    "back": "A mark or character representing something else, such as an idea, quantity, or object."
+  },
+  {
+    "front": "thin",
+    "back": "Having a small distance between opposite sides; not thick; or, of a person, slim."
+  },
+  {
+    "front": "blood",
+    "back": "The red liquid that circulates in the arteries and veins of humans and other vertebrate animals, carrying oxygen to and removing carbon dioxide from the tissues."
+  },
+  {
+    "front": "burn",
+    "back": "To be consumed by fire; or, to produce heat or light."
+  },
+  {
+    "front": "cell",
+    "back": "The smallest structural and functional unit of an organism; or, a small room in a prison or monastery."
+  },
+  {
+    "front": "contain",
+    "back": "To have or hold (something) within."
+  },
+  {
+    "front": "correct",
+    "back": "Free from error; true or right; or, to put right (an error or fault)."
+  },
+  {
+    "front": "crop",
+    "back": "A cultivated plant that is grown on a large scale for food (e.g., wheat, rice)."
+  },
+  {
+    "front": "demand",
+    "back": "An insistent and peremptory request, made as of right; or, to ask for something forcefully."
+  },
+  {
+    "front": "equal",
+    "back": "Being the same in quantity, size, degree, or value."
+  },
+  {
+    "front": "feed",
+    "back": "To give food to a person, animal, or group."
+  },
+  {
+    "front": "hole",
+    "back": "A hollow place in a solid body or surface."
+  },
+  {
+    "front": "increase",
+    "back": "To become or make greater in size, amount, intensity, or degree."
+  },
+  {
+    "front": "lord",
+    "back": "A man of high rank in a feudal society; a nobleman or master."
+  },
+  {
+    "front": "owe",
+    "back": "To have an obligation to pay or repay (something, especially money) in return for something received."
+  },
+  {
+    "front": "position",
+    "back": "A place where someone or something is located; or, a job or level of status."
+  },
+  {
+    "front": "raise",
+    "back": "To lift or move to a higher position or level; or, to increase the amount or level of."
+  },
+  {
+    "front": "responsible",
+    "back": "Having an obligation to do something, or having control over or care for someone, as part of one's job or role."
+  },
+  {
+    "front": "sight",
+    "back": "The faculty or power of seeing; or, a thing seen."
+  },
+  {
+    "front": "spot",
+    "back": "A small round or irregular patch or mark; or, a particular place or location."
+  },
+  {
+    "front": "structure",
+    "back": "The arrangement of and relations between the parts or elements of something complex; or, a building."
+  },
+  {
+    "front": "whole",
+    "back": "All of something; entire."
+  },
+  {
+    "front": "coach",
+    "back": "A person who trains an athlete or a team; or, a large bus for transporting people."
+  },
+  {
+    "front": "control",
+    "back": "The power to influence or direct people's behavior or the course of events; or, to determine the behavior or supervise the running of."
+  },
+  {
+    "front": "description",
+    "back": "A spoken or written account of a person, object, or event."
+  },
+  {
+    "front": "direct",
+    "back": "Extending or moving from one place to another without changing direction or stopping; or, to supervise or manage."
+  },
+  {
+    "front": "exam",
+    "back": "A formal test of a person's knowledge or proficiency in a subject or skill; short for examination."
+  },
+  {
+    "front": "example",
+    "back": "A thing characteristic of its kind or illustrating a general rule."
+  },
+  {
+    "front": "limit",
+    "back": "A point or level beyond which something does not or may not extend or pass."
+  },
+  {
+    "front": "local",
+    "back": "Relating to or characteristic of a particular area or neighborhood."
+  },
+  {
+    "front": "magical",
+    "back": "Relating to or characteristic of magic; enchanted."
+  },
+  {
+    "front": "mail",
+    "back": "Letters and packages handled by a postal system; or, to send (a letter or package) using the post."
+  },
+  {
+    "front": "novel",
+    "back": "A fictitious prose narrative of book length, typically representing character and action with some degree of realism."
+  },
+  {
+    "front": "outline",
+    "back": "A drawing or diagram that gives the essential features but not the details; or, a summary of a written work."
+  },
+  {
+    "front": "poet",
+    "back": "A person who writes poems."
+  },
+  {
+    "front": "print",
+    "back": "To produce (books, newspapers, photographs, etc.) by a mechanical process involving the transfer of text or images to paper."
+  },
+  {
+    "front": "scene",
+    "back": "The place where an incident in real life or fiction occurs; or, a division of an act in a play during which the action takes place in a single location without a break in time."
+  },
+  {
+    "front": "sheet",
+    "back": "A broad, flat, thin piece of material (e.g., paper, cloth, metal)."
+  },
+  {
+    "front": "silly",
+    "back": "Having or showing a lack of common sense or judgment; ridiculous."
+  },
+  {
+    "front": "store",
+    "back": "A retail establishment selling items to the public; or, to keep or reserve (something) for future use."
+  },
+  {
+    "front": "suffer",
+    "back": "To experience or be subjected to (something bad or unpleasant)."
+  },
+  {
+    "front": "technology",
+    "back": "The application of scientific knowledge for practical purposes, especially in industry."
+  },
+  {
+    "front": "across",
+    "back": "From one side to the other of (something)."
+  },
+  {
+    "front": "breathe",
+    "back": "To take air into the lungs and then expel it; to inhale and exhale."
+  },
+  {
+    "front": "characteristic",
+    "back": "A feature or quality belonging typically to a person, place, or thing and serving to identify it."
+  },
+  {
+    "front": "consume",
+    "back": "To eat, drink, or ingest (food or drink); or, to use up (a resource)."
+  },
+  {
+    "front": "excite",
+    "back": "To cause strong feelings of enthusiasm and eagerness in (someone)."
+  },
+  {
+    "front": "extreme",
+    "back": "Reaching a high or the highest degree; very great; or, far from the center or average."
+  },
+  {
+    "front": "fear",
+    "back": "An unpleasant emotion caused by the belief that someone or something is dangerous, likely to cause pain, or a threat."
+  },
+  {
+    "front": "fortunate",
+    "back": "Favored by or involving good luck or fortune."
+  },
+  {
+    "front": "happen",
+    "back": "To take place; occur."
+  },
+  {
+    "front": "length",
+    "back": "The measurement or extent of something from end to end; the longest extent of anything as measured from beginning to end."
+  },
+  {
+    "front": "mistake",
+    "back": "An action or judgment that is misguided or wrong."
+  },
+  {
+    "front": "observe",
+    "back": "To notice or perceive (something) and typically record it as being significant."
+  },
+  {
+    "front": "opportunity",
+    "back": "A set of circumstances that makes it possible to do something."
+  },
+  {
+    "front": "prize",
+    "back": "An award won in a contest or lottery; or, something desirable gained in a competition."
+  },
+  {
+    "front": "race",
+    "back": "A competition between runners, horses, vehicles, etc., to see which is the fastest in covering a set course."
+  },
+  {
+    "front": "realize",
+    "back": "To become fully aware of (something) as a fact; understand clearly."
+  },
+  {
+    "front": "respond",
+    "back": "To say something in reply; or, to react to something."
+  },
+  {
+    "front": "risk",
+    "back": "A situation involving exposure to danger, harm, or loss."
+  },
+  {
+    "front": "wonder",
+    "back": "A feeling of surprise mingled with admiration, caused by something beautiful, unexpected, unfamiliar, or inexplicable."
+  },
+  {
+    "front": "yet",
+    "back": "Up until the present time; still; or, used to introduce a contrasting idea (like 'but')."
+  },
+  {
+    "front": "academy",
+    "back": "A place of study or training in a special field."
+  },
+  {
+    "front": "ancient",
+    "back": "Belonging to the very distant past and no longer in existence."
+  },
+  {
+    "front": "board",
+    "back": "A long, thin, flat piece of wood or other hard material; or, a group of people who manage the affairs of an organization."
+  },
+  {
+    "front": "century",
+    "back": "A period of one hundred years."
+  },
+  {
+    "front": "clue",
+    "back": "A piece of evidence or information used in the detection of a crime or solving of a mystery."
+  },
+  {
+    "front": "concert",
+    "back": "A musical performance given in public, typically by one or more singers or instrumentalists."
+  },
+  {
+    "front": "county",
+    "back": "A political and administrative division of a state or country, providing local government."
+  },
+  {
+    "front": "dictionary",
+    "back": "A book or electronic resource that lists the words of a language (typically in alphabetical order) and gives their meaning, or gives the equivalent words in a different language."
+  },
+  {
+    "front": "exist",
+    "back": "To be real; to have life or actual being."
+  },
+  {
+    "front": "flat",
+    "back": "Having a level surface; smooth and even, without marked slopes or indentations; or, a set of rooms for living in, usually on one floor of a building (an apartment)."
+  },
+  {
+    "front": "gentleman",
+    "back": "A chivalrous, courteous, or honorable man; or, a man of good social position."
+  },
+  {
+    "front": "hidden",
+    "back": "Kept out of sight; concealed."
+  },
+  {
+    "front": "maybe",
+    "back": "Perhaps; possibly."
+  },
+  {
+    "front": "officer",
+    "back": "A person holding a position of authority in the military or on a police force."
+  },
+  {
+    "front": "original",
+    "back": "Present or existing from the beginning; the first or earliest; or, not a copy."
+  },
+  {
+    "front": "pound",
+    "back": "A unit of weight equal to 16 ounces; or, to strike or hit heavily and repeatedly."
+  },
+  {
+    "front": "process",
+    "back": "A series of actions or steps taken in order to achieve a particular end."
+  },
+  {
+    "front": "publish",
+    "back": "To prepare and issue (a book, journal, piece of music, etc.) for public sale or distribution."
+  },
+  {
+    "front": "theater",
+    "back": "A building or outdoor area in which plays, movies, or other dramatic performances are given."
+  },
+  {
+    "front": "wealth",
+    "back": "An abundance of valuable possessions or money."
+  },
+  {
+    "front": "appreciate",
+    "back": "To recognize the full worth of; to be grateful for (something)."
+  },
+  {
+    "front": "available",
+    "back": "Able to be used or obtained; at someone's disposal."
+  },
+  {
+    "front": "beat",
+    "back": "To defeat (someone) in a game or contest; or, to hit (someone or something) repeatedly."
+  },
+  {
+    "front": "bright",
+    "back": "Giving out or reflecting much light; shining; or, intelligent."
+  },
+  {
+    "front": "celebrate",
+    "back": "To observe (a significant date or event) with a social gathering or enjoyable activity."
+  },
+  {
+    "front": "determine",
+    "back": "To cause (something) to occur in a particular way; or, to firmly decide."
+  },
+  {
+    "front": "disappear",
+    "back": "To cease to be visible; vanish."
+  },
+  {
+    "front": "else",
+    "back": "In addition to what has been already mentioned; or, as an alternative."
+  },
+  {
+    "front": "fair",
+    "back": "Treating people equally without favoritism or discrimination; or, light in color (of hair or skin)."
+  },
+  {
+    "front": "flow",
+    "back": "To move steadily and continuously in a stream."
+  },
+  {
+    "front": "forward",
+    "back": "Toward the direction that one is facing or traveling; onward."
+  },
+  {
+    "front": "hill",
+    "back": "A naturally raised area of land, smaller than a mountain."
+  },
+  {
+    "front": "level",
+    "back": "A point on a scale of quantity, intensity, or amount; or, having a flat, even surface."
+  },
+  {
+    "front": "lone",
+    "back": "Having no companions; solitary."
+  },
+  {
+    "front": "puddle",
+    "back": "A small pool of liquid, especially rainwater on the ground."
+  },
+  {
+    "front": "response",
+    "back": "A verbal or written answer; or, a reaction to something."
+  },
+  {
+    "front": "season",
+    "back": "Each of the four divisions of the year (spring, summer, autumn, and winter)."
+  },
+  {
+    "front": "solution",
+    "back": "A means of solving a problem or dealing with a difficult situation; or, a liquid mixture."
+  },
+  {
+    "front": "waste",
+    "back": "Unwanted or unusable material; or, to use or expend carelessly, extravagantly, or to no purpose."
+  },
+  {
+    "front": "whether",
+    "back": "Expressing a doubt or choice between alternatives."
+  },
+  {
+    "front": "argue",
+    "back": "To express disagreement with someone, often forcefully or angrily."
+  },
+  {
+    "front": "communicate",
+    "back": "To share or exchange information, news, or ideas."
+  },
+  {
+    "front": "crowd",
+    "back": "A large number of people gathered together in a disorganized way."
+  },
+  {
+    "front": "depend",
+    "back": "To be controlled or determined by; or, to rely on."
+  },
+  {
+    "front": "dish",
+    "back": "A shallow container used for cooking or serving food; or, food prepared in a particular way."
+  },
+  {
+    "front": "empty",
+    "back": "Containing nothing; not filled or occupied."
+  },
+  {
+    "front": "exact",
+    "back": "Not approximated; strictly correct in every detail."
+  },
+  {
+    "front": "fresh",
+    "back": "Newly made or obtained; not stale or preserved."
+  },
+  {
+    "front": "gather",
+    "back": "To bring together in a group or crowd; to collect."
+  },
+  {
+    "front": "indicate",
+    "back": "To point out or show; to suggest as a desirable or necessary course of action."
+  },
+  {
+    "front": "item",
+    "back": "An individual article or unit, especially one that is part of a list, collection, or series."
+  },
+  {
+    "front": "offer",
+    "back": "To present or propose (something) for someone to accept or reject."
+  },
+  {
+    "front": "price",
+    "back": "The amount of money for which something is bought or sold."
+  },
+  {
+    "front": "product",
+    "back": "An article or substance manufactured or refined for sale."
+  },
+  {
+    "front": "property",
+    "back": "A thing or things belonging to someone; possessions collectively; or, land and buildings."
+  },
+  {
+    "front": "purchase",
+    "back": "To acquire (something) by paying for it; to buy."
+  },
+  {
+    "front": "recommend",
+    "back": "To suggest or praise (someone or something) as being suitable for a particular purpose or role."
+  },
+  {
+    "front": "select",
+    "back": "To carefully choose (someone or something) as being the best or most suitable."
+  },
+  {
+    "front": "tool",
+    "back": "A device or implement, especially one held in the hand, used to carry out a particular function."
+  },
+  {
+    "front": "treat",
+    "back": "To behave toward or deal with (someone or something) in a certain way; or, an unexpected and enjoyable event or item."
+  },
+  {
+    "front": "alive",
+    "back": "Living; not dead."
+  },
+  {
+    "front": "bone",
+    "back": "Any of the pieces of hard, whitish tissue making up the skeleton in humans and other vertebrate animals."
+  },
+  {
+    "front": "bother",
+    "back": "To take the trouble to do something; or, to cause trouble or annoyance to."
+  },
+  {
+    "front": "captain",
+    "back": "The person in command of a ship or aircraft; or, the leader of a team."
+  },
+  {
+    "front": "conclusion",
+    "back": "The end or finish of an event or process; or, a judgment or decision reached by reasoning."
+  },
+  {
+    "front": "doubt",
+    "back": "A feeling of uncertainty or lack of conviction."
+  },
+  {
+    "front": "explore",
+    "back": "To travel through (an unfamiliar area) in order to learn about it."
+  },
+  {
+    "front": "foreign",
+    "back": "Of, from, in, or characteristic of a country or language other than one's own."
+  },
+  {
+    "front": "glad",
+    "back": "Feeling pleasure, joy, or delight."
+  },
+  {
+    "front": "however",
+    "back": "Used to introduce a statement that contrasts with or seems to contradict something that has been said previously; nevertheless."
+  },
+  {
+    "front": "injustice",
+    "back": "Lack of fairness or justice."
+  },
+  {
+    "front": "international",
+    "back": "Existing, occurring, or carried on between two or more nations."
+  },
+  {
+    "front": "lawyer",
+    "back": "A person who practices or studies law; an attorney or counsel."
+  },
+  {
+    "front": "mention",
+    "back": "To refer to something briefly and without going into detail."
+  },
+  {
+    "front": "policy",
+    "back": "A course or principle of action adopted or proposed by a government, party, business, or individual."
+  },
+  {
+    "front": "social",
+    "back": "Relating to society or its organization; or, relating to or designed for activities in which people meet each other."
+  },
+  {
+    "front": "speech",
+    "back": "The expression of or the ability to express thoughts and feelings by articulate sounds; or, a formal talk given to an audience."
+  },
+  {
+    "front": "staff",
+    "back": "All the people employed by a particular organization."
+  },
+  {
+    "front": "toward",
+    "back": "In the direction of; or, in relation to."
+  },
+  {
+    "front": "wood",
+    "back": "The hard, fibrous material that forms the main substance of the trunk or branches of a tree."
+  },
+  {
+    "front": "achieve",
+    "back": "To successfully bring about or reach (an objective, level, or effort) by effort, skill, or courage."
+  },
+  {
+    "front": "advise",
+    "back": "To offer suggestions about the best course of action to someone."
+  },
+  {
+    "front": "already",
+    "back": "Before or by now; previously."
+  },
+  {
+    "front": "basic",
+    "back": "Relating to the essential foundation or starting point of something; fundamental."
+  },
+  {
+    "front": "bit",
+    "back": "A small piece or amount of something; or, a short time."
+  },
+  {
+    "front": "consider",
+    "back": "To think carefully about (something), typically before making a decision."
+  },
+  {
+    "front": "destroy",
+    "back": "To put an end to the existence of (something) by damaging or attacking it."
+  },
+  {
+    "front": "entertain",
+    "back": "To provide (someone) with amusement or enjoyment."
+  },
+  {
+    "front": "extra",
+    "back": "Added to what is usual or necessary; more."
+  },
+  {
+    "front": "goal",
+    "back": "The object of a person's ambition or effort; an aim or desired result."
+  },
+  {
+    "front": "lie",
+    "back": "To be in a horizontal position on a surface; or, to tell an untruth."
+  },
+  {
+    "front": "meat",
+    "back": "The flesh of an animal (especially a mammal) as food."
+  },
+  {
+    "front": "opinion",
+    "back": "A view or judgment formed about something, not necessarily based on fact or knowledge."
+  },
+  {
+    "front": "real",
+    "back": "Actually existing as a thing or occurring in fact; not imagined or supposed."
+  },
+  {
+    "front": "reflect",
+    "back": "To throw back (heat, light, or sound) without absorbing it; or, to think deeply or carefully about."
+  },
+  {
+    "front": "regard",
+    "back": "To consider or think of (someone or something) in a specified way; or, attention or respect."
+  },
+  {
+    "front": "serve",
+    "back": "To perform duties or services for (another person or an organization); or, to present (food or drink)."
+  },
+  {
+    "front": "vegetable",
+    "back": "A plant or part of a plant used as food, typically as a savory dish or accompaniment."
+  },
+  {
+    "front": "war",
+    "back": "A sustained conflict carried on by arms between different states or parties."
+  },
+  {
+    "front": "worth",
+    "back": "The value of something measured by its qualities or by the esteem in which it is held."
+  },
+  {
+    "front": "appear",
+    "back": "To come into sight; become visible or noticeable."
+  },
+  {
+    "front": "base",
+    "back": "The lowest part or edge of something, especially the part on which it rests or is supported."
+  },
+  {
+    "front": "brain",
+    "back": "An organ of soft nervous tissue contained in the skull, functioning as the coordinating center of sensation and intellectual and nervous activity."
+  },
+  {
+    "front": "career",
+    "back": "An occupation undertaken for a significant period of a person's life and with opportunities for progress."
+  },
+  {
+    "front": "clerk",
+    "back": "A person employed in an office or bank to keep records or accounts and to undertake other routine administrative duties."
+  },
+  {
+    "front": "effort",
+    "back": "A vigorous or determined attempt; physical or mental exertion."
+  },
+  {
+    "front": "enter",
+    "back": "To come or go into (a place)."
+  },
+  {
+    "front": "excellent",
+    "back": "Extremely good; outstanding."
+  },
+  {
+    "front": "hero",
+    "back": "A person who is admired for their courage, outstanding achievements, or noble qualities."
+  },
+  {
+    "front": "hurry",
+    "back": "To move or act with great speed."
+  },
+  {
+    "front": "inform",
+    "back": "To give (someone) facts or information."
+  },
+  {
+    "front": "later",
+    "back": "At a time in the near future; subsequently."
+  },
+  {
+    "front": "leave",
+    "back": "To go away from (a place or person)."
+  },
+  {
+    "front": "locate",
+    "back": "To discover the exact place or position of."
+  },
+  {
+    "front": "nurse",
+    "back": "A person trained to care for the sick or infirm, especially in a hospital."
+  },
+  {
+    "front": "operation",
+    "back": "An act of surgery performed on a patient; or, the state of being active or functioning."
+  },
+  {
+    "front": "pain",
+    "back": "Highly unpleasant physical sensation caused by illness or injury."
+  },
+  {
+    "front": "refuse",
+    "back": "To indicate that one is not willing to do something requested or desired."
+  },
+  {
+    "front": "though",
+    "back": "Despite the fact that; although; or, however (used to introduce a contrasting or qualifying statement)."
+  },
+  {
+    "front": "various",
+    "back": "Different from one another; of many kinds."
+  },
+  {
+    "front": "actual",
+    "back": "Existing in fact; real."
+  },
+  {
+    "front": "amaze",
+    "back": "To surprise (someone) greatly; fill with astonishment."
+  },
+  {
+    "front": "charge",
+    "back": "To ask (an amount) as a price for a service or goods; or, an accusation."
+  },
+  {
+    "front": "comfort",
+    "back": "A state of physical ease and freedom from pain or constraint; or, to soothe or console."
+  },
+  {
+    "front": "contact",
+    "back": "The state of physically touching; or, communication with someone."
+  },
+  {
+    "front": "customer",
+    "back": "A person or organization that buys goods or services from a store or business."
+  },
+  {
+    "front": "deliver",
+    "back": "To bring and hand over (something) to the proper recipient or address."
+  },
+  {
+    "front": "earn",
+    "back": "To obtain (money) in return for labor or services."
+  },
+  {
+    "front": "gate",
+    "back": "A hinged barrier used to close an opening in a fence or wall; or, an airport departure area."
+  },
+  {
+    "front": "include",
+    "back": "To comprise or contain as part of a whole."
+  },
+  {
+    "front": "manage",
+    "back": "To be in charge of (a company, establishment, or undertaking); or, to succeed in doing or coping with (something)."
+  },
+  {
+    "front": "mystery",
+    "back": "Something that is difficult or impossible to understand or explain."
+  },
+  {
+    "front": "occur",
+    "back": "To happen; take place."
+  },
+  {
+    "front": "opposite",
+    "back": "Situated on the other side of; contrary in position or meaning."
+  },
+  {
+    "front": "plate",
+    "back": "A shallow, typically circular dish from which food is eaten or served."
+  },
+  {
+    "front": "receive",
+    "back": "To be given, presented with, or paid (something)."
+  },
+  {
+    "front": "reward",
+    "back": "A return or recompense made to or received by a person for service, effort, or hardship."
+  },
+  {
+    "front": "set",
+    "back": "To put, lay, or stand (something) in a specified place or position."
+  },
+  {
+    "front": "steal",
+    "back": "To take (another person's property) without permission or legal right and without intending to return it."
+  },
+  {
+    "front": "thief",
+    "back": "A person who steals another person's property, especially secretly or without open force."
+  },
+  {
+    "front": "advance",
+    "back": "To move forward in a purposeful way; or, a forward movement."
+  },
+  {
+    "front": "athlete",
+    "back": "A person who is proficient in sports and other forms of physical exercise."
+  },
+  {
+    "front": "average",
+    "back": "Constituting the result obtained by adding together several quantities and then dividing this total by the number of quantities; typical."
+  },
+  {
+    "front": "behavior",
+    "back": "The way in which one acts or conducts oneself, especially toward others."
+  },
+  {
+    "front": "behind",
+    "back": "At the back of (someone or something); or, late in relation to the schedule."
+  },
+  {
+    "front": "course",
+    "back": "The route or direction followed by a ship, aircraft, river, or road; or, a series of lectures or lessons."
+  },
+  {
+    "front": "lower",
+    "back": "To move (something) downward or to a lower level; or, situated beneath."
+  },
+  {
+    "front": "match",
+    "back": "A game or contest in which two or more people or teams compete; or, a small stick used to start a fire."
+  },
+  {
+    "front": "member",
+    "back": "A person, animal, or thing belonging to a particular group or organization."
+  },
+  {
+    "front": "mental",
+    "back": "Relating to the mind."
+  },
+  {
+    "front": "passenger",
+    "back": "A person traveling in a vehicle, ship, aircraft, or train, other than the driver, pilot, or crew."
+  },
+  {
+    "front": "personality",
+    "back": "The combination of characteristics or qualities that form an individual's distinct character."
+  },
+  {
+    "front": "poem",
+    "back": "A piece of writing that uses rhythmic and often metaphorical language to evoke emotional responses."
+  },
+  {
+    "front": "pole",
+    "back": "A long, slender, rounded piece of wood or metal, typically used to support or prop something."
+  },
+  {
+    "front": "remove",
+    "back": "To take (something) away or off from the position where it is placed."
+  },
+  {
+    "front": "safety",
+    "back": "The condition of being protected from danger, risk, or injury."
+  },
+  {
+    "front": "shoot",
+    "back": "To fire a bullet or arrow from a weapon; or, to move suddenly and rapidly."
+  },
+  {
+    "front": "sound",
+    "back": "Vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear."
+  },
+  {
+    "front": "swim",
+    "back": "To propel the body through water by means of the limbs."
+  },
+  {
+    "front": "web",
+    "back": "A network of fine threads constructed by a spider; or, a complex system of interconnected elements."
+  },
+  {
+    "front": "block",
+    "back": "A large solid piece of hard material; or, to prevent the movement or flow of something."
+  },
+  {
+    "front": "cheer",
+    "back": "To shout for joy or encouragement; or, a cry of encouragement, approval, or celebration."
+  },
+  {
+    "front": "complex",
+    "back": "Consisting of many different and connected parts; complicated."
+  },
+  {
+    "front": "critic",
+    "back": "A person who expresses an unfavorable opinion of something; or, a person who judges the merits of literary or artistic works."
+  },
+  {
+    "front": "event",
+    "back": "A planned public or social occasion; or, something that happens or takes place."
+  },
+  {
+    "front": "exercise",
+    "back": "Activity requiring physical effort, carried out to sustain or improve health and fitness; or, a task or problem set to practice a skill."
+  },
+  {
+    "front": "fit",
+    "back": "Of a suitable quality, standard, or type to fulfill a purpose; or, healthy and strong."
+  },
+  {
+    "front": "friendship",
+    "back": "The state of being friends; a relationship between friends."
+  },
+  {
+    "front": "guide",
+    "back": "A person who shows the way to others; or, to show or direct the way."
+  },
+  {
+    "front": "lack",
+    "back": "The state of being without or not having enough of something."
+  },
+  {
+    "front": "passage",
+    "back": "A usually long and narrow way connecting one area to another; or, a brief extract from a book or piece of music."
+  },
+  {
+    "front": "perform",
+    "back": "To carry out, accomplish, or fulfill (an action, task, or function); or, to present a piece of entertainment to an audience."
+  },
+  {
+    "front": "pressure",
+    "back": "The continuous physical force exerted on or against an object by something in contact with it; or, a sense of urgency."
+  },
+  {
+    "front": "probable",
+    "back": "Likely to happen or be the case."
+  },
+  {
+    "front": "public",
+    "back": "Relating to or concerning the people as a whole; or, the community or people as a whole."
+  },
+  {
+    "front": "strike",
+    "back": "To hit forcibly and deliberately; or, a refusal to work organized by a body of employees as a form of protest."
+  },
+  {
+    "front": "support",
+    "back": "To bear all or part of the weight of; hold up; or, to give encouragement or approval to."
+  },
+  {
+    "front": "task",
+    "back": "A piece of work to be done or undertaken."
+  },
+  {
+    "front": "term",
+    "back": "A word or phrase used to describe a thing or to express a concept; or, a fixed or limited period for which something lasts."
+  },
+  {
+    "front": "unite",
+    "back": "To join together for a common purpose or by a common feeling; to come or bring together."
+  },
+  {
+    "front": "associate",
+    "back": "To connect (someone or something) with something else in one's mind; or, a partner or colleague."
+  },
+  {
+    "front": "environment",
+    "back": "The surroundings or conditions in which a person, animal, or plant lives or operates."
+  },
+  {
+    "front": "factory",
+    "back": "A building or group of buildings where goods are manufactured or processed."
+  },
+  {
+    "front": "feature",
+    "back": "A distinctive attribute or aspect of something; or, to include as an important part."
+  },
+  {
+    "front": "instance",
+    "back": "An example or single occurrence of something."
+  },
+  {
+    "front": "involve",
+    "back": "To include (something) as a necessary part or result."
+  },
+  {
+    "front": "medicine",
+    "back": "The science or practice of the diagnosis, treatment, and prevention of disease; or, a drug or other preparation for the treatment of illness."
+  },
+  {
+    "front": "mix",
+    "back": "To combine or put together to form one substance or mass."
+  },
+  {
+    "front": "organize",
+    "back": "To arrange or put into a coherent whole or a systematic order."
+  },
+  {
+    "front": "period",
+    "back": "A length or portion of time."
+  },
+  {
+    "front": "populate",
+    "back": "To form the population of (a town, area, or country); inhabit."
+  },
+  {
+    "front": "produce",
+    "back": "To make or manufacture from components or raw materials."
+  },
+  {
+    "front": "range",
+    "back": "The area of variation between upper and lower limits on a particular scale; or, a set of different things of the same general type."
+  },
+  {
+    "front": "recognize",
+    "back": "To identify (someone or something) from having encountered them before; know again."
+  },
+  {
+    "front": "regular",
+    "back": "Consistent or habitual; or, done or recurring uniformly in time."
+  },
+  {
+    "front": "sign",
+    "back": "An object, quality, or event whose presence or occurrence indicates the probable presence or occurrence of something else; or, to write one's name."
+  },
+  {
+    "front": "tip",
+    "back": "The end or extremity of something, especially a small or tapering one; or, a small piece of practical advice."
+  },
+  {
+    "front": "tradition",
+    "back": "The transmission of customs or beliefs from generation to generation; or, a long-established custom."
+  },
+  {
+    "front": "trash",
+    "back": "Worthless or discarded material; rubbish."
+  },
+  {
+    "front": "wide",
+    "back": "Having a great distance from side to side; broad."
+  },
+  {
+    "front": "advice",
+    "back": "Guidance or recommendations offered with regard to prudent future action."
+  },
+  {
+    "front": "along",
+    "back": "Moving in a constant line on (a road, path, or street)."
+  },
+  {
+    "front": "attention",
+    "back": "The act or state of applying the mind to something; careful notice."
+  },
+  {
+    "front": "attract",
+    "back": "To cause (someone or something) to come to a place or participate in a venture by offering something interesting or desirable."
+  },
+  {
+    "front": "climb",
+    "back": "To go up or ascend (a mountain, tree, stair, or ladder)."
+  },
+  {
+    "front": "drop",
+    "back": "To fall vertically; or, a small amount of liquid that forms a round shape."
+  },
+  {
+    "front": "final",
+    "back": "Coming at the end of a series of actions; last."
+  },
+  {
+    "front": "further",
+    "back": "More distant or advanced; or, to a greater extent."
+  },
+  {
+    "front": "imply",
+    "back": "To strongly suggest the truth or existence of (something not expressly stated)."
+  },
+  {
+    "front": "maintain",
+    "back": "To keep (something) at an appropriate level or standard; or, to state firmly."
+  },
+  {
+    "front": "neither",
+    "back": "Not either; or, used to show that a negative statement is also true of someone or something else."
+  },
+  {
+    "front": "otherwise",
+    "back": "In circumstances different from those mentioned; or, in a different way."
+  },
+  {
+    "front": "physical",
+    "back": "Relating to the body as opposed to the mind; or, relating to things perceived through the senses."
+  },
+  {
+    "front": "prove",
+    "back": "To demonstrate the truth or existence of (something) by evidence or argument."
+  },
+  {
+    "front": "react",
+    "back": "To act in response to a particular influence or stimulus."
+  },
+  {
+    "front": "ride",
+    "back": "To sit on and control the movement of (an animal or bicycle); or, a journey on a horse or vehicle."
+  },
+  {
+    "front": "situated",
+    "back": "Having been placed in a particular location."
+  },
+  {
+    "front": "society",
+    "back": "The community of people living in a particular country or region and having shared customs, laws, and organizations."
+  },
+  {
+    "front": "standard",
+    "back": "A level of quality or attainment; or, used or accepted as normal or average."
+  },
+  {
+    "front": "suggest",
+    "back": "To put forward for consideration."
+  },
+  {
+    "front": "actually",
+    "back": "In fact or really (used to emphasize what is true)."
+  },
+  {
+    "front": "bite",
+    "back": "To use the teeth to cut into something; or, an act of biting."
+  },
+  {
+    "front": "coast",
+    "back": "The land next to or near the sea or ocean."
+  },
+  {
+    "front": "deal",
+    "back": "An agreement entered into by two or more parties for their mutual benefit; or, to distribute or dispense."
+  },
+  {
+    "front": "desert",
+    "back": "To abandon (a person, cause, or country) in a way considered disloyal; or, a dry, barren area of land."
+  },
+  {
+    "front": "earthquake",
+    "back": "A sudden violent shaking of the ground, typically causing great destruction, as a result of movements within the earth's crust."
+  },
+  {
+    "front": "effective",
+    "back": "Successful in producing a desired or intended result."
+  },
+  {
+    "front": "examine",
+    "back": "To inspect (someone or something) in detail to determine their nature or condition."
+  },
+  {
+    "front": "false",
+    "back": "Not according with truth or fact; incorrect."
+  },
+  {
+    "front": "gift",
+    "back": "A thing given willingly to someone without payment; a present."
+  },
+  {
+    "front": "hunger",
+    "back": "A feeling of discomfort or weakness caused by lack of food, coupled with the desire to eat."
+  },
+  {
+    "front": "imagine",
+    "back": "To form a mental image or concept of; to believe."
+  },
+  {
+    "front": "journey",
+    "back": "An act of traveling from one place to another."
+  },
+  {
+    "front": "puzzle",
+    "back": "A game, toy, or problem designed to test ingenuity or knowledge."
+  },
+  {
+    "front": "quite",
+    "back": "To the utmost or most absolute extent or degree; completely; or, to a certain or fairly significant extent or degree."
+  },
+  {
+    "front": "rather",
+    "back": "Used to indicate one's preference or alternative; or, to a certain extent; somewhat."
+  },
+  {
+    "front": "specific",
+    "back": "Clearly defined or identified; precise."
+  },
+  {
+    "front": "tour",
+    "back": "A journey for pleasure in which several different places are visited."
+  },
+  {
+    "front": "trip",
+    "back": "A journey or excursion, especially for pleasure."
+  },
+  {
+    "front": "value",
+    "back": "The regard that something is held to deserve; the importance, worth, or usefulness of something."
+  },
+  {
+    "front": "band",
+    "back": "A small group of musicians who play pop, jazz, or rock music; or, a strip of material used for fastening or to go around something."
+  },
+  {
+    "front": "barely",
+    "back": "Only just; almost not."
+  },
+  {
+    "front": "boring",
+    "back": "Not interesting; dull."
+  },
+  {
+    "front": "cancel",
+    "back": "To decide that an arranged event will not take place."
+  },
+  {
+    "front": "driveway",
+    "back": "A short private road leading from a public road to a house, garage, or parking area."
+  },
+  {
+    "front": "garbage",
+    "back": "Waste food, scraps, or rubbish; trash."
+  },
+  {
+    "front": "instrument",
+    "back": "A tool or implement, especially one for precision work; or, a device for producing music."
+  },
+  {
+    "front": "list",
+    "back": "A number of connected items or names written consecutively; or, to make a record of (items)."
+  },
+  {
+    "front": "magic",
+    "back": "The power of apparently influencing the course of events by using mysterious or supernatural forces."
+  },
+  {
+    "front": "message",
+    "back": "A verbal, written, or recorded communication sent to or left for a recipient who cannot be contacted directly."
+  },
+  {
+    "front": "notice",
+    "back": "The fact of observing or paying attention to something; or, a warning or announcement."
+  },
+  {
+    "front": "own",
+    "back": "Belonging to a particular person; or, to possess."
+  },
+  {
+    "front": "predict",
+    "back": "To say or estimate that (a specified thing) will happen in the future or will be a consequence of something."
+  },
+  {
+    "front": "professor",
+    "back": "A teacher of the highest rank in a college or university."
+  },
+  {
+    "front": "rush",
+    "back": "To move with urgent haste; or, a sudden quick movement toward something."
+  },
+  {
+    "front": "schedule",
+    "back": "A plan for carrying out a process or procedure, giving lists of intended events and times."
+  },
+  {
+    "front": "share",
+    "back": "To have or use something in common with someone else."
+  },
+  {
+    "front": "stage",
+    "back": "A raised floor or platform, typically in a theater, on which actors, entertainers, or speakers perform; or, a point, period, or step in a process."
+  },
+  {
+    "front": "storm",
+    "back": "A violent disturbance of the atmosphere with strong winds and usually rain, thunder, lightning, or snow."
+  },
+  {
+    "front": "within",
+    "back": "Inside (something); or, occurring inside a particular period of time."
+  },
+  {
+    "front": "advertise",
+    "back": "To present or describe (a product, service, or event) in some public medium of communication in order to induce people to buy or support it."
+  },
+  {
+    "front": "assign",
+    "back": "To allocate (a job or duty); or, to officially give (something) to someone."
+  },
+  {
+    "front": "audience",
+    "back": "The assembled spectators or listeners at a public event; or, a body of hearers or readers."
+  },
+  {
+    "front": "breakfast",
+    "back": "The first meal of the day, usually eaten in the morning."
+  },
+  {
+    "front": "competition",
+    "back": "The activity or condition of striving to gain or win something by defeating or establishing superiority over others."
+  },
+  {
+    "front": "cool",
+    "back": "Of or at a fairly low temperature; or, fashionable and admirable."
+  },
+  {
+    "front": "gain",
+    "back": "To obtain or secure (something desired, favorable, or profitable); or, an increase or improvement."
+  },
+  {
+    "front": "importance",
+    "back": "The state or fact of being of great significance or value."
+  },
+  {
+    "front": "knowledge",
+    "back": "Facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject."
+  },
+  {
+    "front": "major",
+    "back": "Important, serious, or significant; or, a military rank."
+  },
+  {
+    "front": "mean",
+    "back": "To intend to convey, indicate, or refer to (a particular thing or notion); or, unkind or unpleasant."
+  },
+  {
+    "front": "prefer",
+    "back": "To like (one thing or person) better than another or others."
+  },
+  {
+    "front": "president",
+    "back": "The elected head of a republican state; or, the head of a company or organization."
+  },
+  {
+    "front": "progress",
+    "back": "Development toward an improved or more complete condition; or, to move forward."
+  },
+  {
+    "front": "respect",
+    "back": "A feeling of deep admiration for someone or something elicited by their abilities, achievements, or qualities."
+  },
+  {
+    "front": "rich",
+    "back": "Having a great deal of money or assets; wealthy."
+  },
+  {
+    "front": "skill",
+    "back": "The ability to do something well; expertise."
+  },
+  {
+    "front": "somehow",
+    "back": "In a way that is not known or specified; or, by some means."
+  },
+  {
+    "front": "strength",
+    "back": "The quality or state of being physically strong; or, the ability to withstand great force or pressure."
+  },
+  {
+    "front": "vote",
+    "back": "A formal expression of opinion or choice made by an individual or body; or, to give or register a vote."
+  },
+  {
+    "front": "above",
+    "back": "At a higher level or layer than; over."
+  },
+  {
+    "front": "ahead",
+    "back": "Further forward in space; in the line of one's forward motion."
+  },
+  {
+    "front": "amount",
+    "back": "A quantity of something, especially the total of a thing or things in number, size, or value."
+  },
+  {
+    "front": "belief",
+    "back": "An acceptance that a statement is true or that something exists."
+  },
+  {
+    "front": "center",
+    "back": "The middle point or part of something."
+  },
+  {
+    "front": "common",
+    "back": "Occurring, found, or done often; prevalent; or, shared by two or more."
+  },
+  {
+    "front": "cost",
+    "back": "An amount that has to be paid or spent to get or achieve something."
+  },
+  {
+    "front": "demonstrate",
+    "back": "To clearly show the existence or truth of (something) by giving proof or evidence."
+  },
+  {
+    "front": "different",
+    "back": "Not the same as another or each other; unlike."
+  },
+  {
+    "front": "evidence",
+    "back": "The available body of facts or information indicating whether a belief or proposition is true or valid."
+  },
+  {
+    "front": "honesty",
+    "back": "The quality of being truthful and free of deceit."
+  },
+  {
+    "front": "idiom",
+    "back": "A group of words established by usage as having a meaning not deducible from those of the individual words (e.g., 'to kill two birds with one stone')."
+  },
+  {
+    "front": "independent",
+    "back": "Free from outside control; not depending on another's authority."
+  },
+  {
+    "front": "inside",
+    "back": "On the inner side or part of; within."
+  },
+  {
+    "front": "master",
+    "back": "A skilled practitioner of a particular art or activity; or, to acquire complete knowledge or skill in (an accomplishment or art)."
+  },
+  {
+    "front": "memory",
+    "back": "The faculty by which the mind stores and remembers information."
+  },
+  {
+    "front": "proper",
+    "back": "Truly what something is said or regarded to be; genuine; or, appropriate for the circumstances."
+  },
+  {
+    "front": "scan",
+    "back": "To look at all parts of (something) carefully in order to detect some feature; or, to convert (a document or picture) into a digital form."
+  },
+  {
+    "front": "section",
+    "back": "Any of the parts into which something is divided."
+  },
+  {
+    "front": "surface",
+    "back": "The outside part or uppermost layer of something."
+  }
+]

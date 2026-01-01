@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3600 Essential English words</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #06b6d4;
+            --muted: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.04)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial
+        }
+
+        body {
+            background: linear-gradient(180deg, var(--bg), #071124);
+            color: #e6eef6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px
+        }
+
+        .app {
+            width: 100%;
+            max-width: 760px
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin: 0
+        }
+
+        .controls {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        select {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: inherit;
+            padding: 8px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: transparent;
+        }
+
+        select option {
+            background-color: white;
+            color: black;
+        }
+
+        button {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: inherit;
+            padding: 8px 12px;
+            border-radius: 10px;
+            cursor: pointer
+        }
+
+        button:active {
+            transform: translateY(1px)
+        }
+
+        .card-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px
+        }
+
+        .card {
+            width: 100%;
+            max-width: 720px;
+            height: 360px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: 14px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            cursor: pointer;
+            perspective: 1000px
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 400ms;
+            transform-style: preserve-3d;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg)
+        }
+
+        .card-face {
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center
+        }
+
+        .front {
+            font-size: 34px;
+            font-weight: 600
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            font-size: 20px;
+            color: var(--muted)
+        }
+
+        .progress {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 8px
+        }
+
+        .progress > i {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #7c3aed);
+            width: 0%
+        }
+
+        .hint {
+            position: absolute;
+            left: 14px;
+            bottom: 12px;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .kbd {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px;
+            border-radius: 6px;
+            font-weight: 600
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <header>
+        <h1>Flashcards</h1>
+        <div class="controls">
+            <select id="bookSelect" title="Select Book"></select>
+            <select id="unitSelect" title="Select Unit" disabled></select>
+            <button id="shuffleBtn">Shuffle</button>
+        </div>
+    </header>
+
+    <div class="board">
+        <section>
+            <div class="card-wrap">
+                <div class="card" id="mainCard" tabindex="0" title="Click or press Space to flip">
+                    <div class="card-inner">
+                        <div class="card-face front" id="cardFront">Select a Book and Unit</div>
+                        <div class="card-face back" id="cardBack">—</div>
+                    </div>
+                    <div class="hint">Space: flip • ← / → : prev/next</div>
+                </div>
+            </div>
+            <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+                <button id="prevBtn">← Prev</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+            <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+            <footer>
+                <div style="margin-top:14px;color:var(--muted);font-size:13px">
+                    Keyboard: <span class="kbd">Space</span> flip — <span class="kbd">←</span>/<span
+                        class="kbd">→</span> navigate
+                </div>
+            </footer>
+        </section>
+    </div>
+</div>
+
+<script>
+    const UNITS = 30;
+
+    const BOOK_OPTIONS = [
+        {name: "Book 1", path: "./files/tests/english/vocabulary/essential-1.json", totalWords: 600},
+        {name: "Book 2", path: "./files/tests/english/vocabulary/essential-2.json", totalWords: 600}
+    ];
+
+    let CURRENT_BOOK_CACHE = null;
+    let cards = [];
+    let idx = 0;
+    let flipped = false;
+
+    const cardFront = document.getElementById('cardFront');
+    const cardBack = document.getElementById('cardBack');
+    const mainCard = document.getElementById('mainCard');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const progressBar = document.getElementById('progressBar');
+    const bookSelect = document.getElementById('bookSelect');
+    const unitSelect = document.getElementById('unitSelect');
+
+
+    function render() {
+        if (!cards.length) {
+            cardFront.textContent = 'Please select a Unit.';
+            cardBack.textContent = '';
+            updateProgress();
+            return
+        }
+        const c = cards[idx];
+        cardFront.textContent = c.front || '(empty)';
+        cardBack.textContent = c.back || '(empty)';
+        updateProgress();
+        mainCard.classList.toggle('flipped', flipped);
+    }
+
+    function next() {
+        if (cards.length === 0) return;
+        idx = (idx + 1) % cards.length;
+        flipped = false;
+        render();
+    }
+
+    function prev() {
+        if (cards.length === 0) return;
+        idx = (idx - 1 + cards.length) % cards.length;
+        flipped = false;
+        render();
+    }
+
+    function updateProgress() {
+        const total = cards.length;
+        const percent = total ? Math.round(((idx + 1) / total) * 100) : 0;
+        progressBar.style.width = percent + '%';
+    }
+
+    function shuffle() {
+        for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[j]] = [cards[j], cards[i]]
+        }
+        idx = 0;
+        render();
+    }
+
+
+    function fetchAndCacheBook(filePath) {
+        CURRENT_BOOK_CACHE = null;
+        unitSelect.disabled = true;
+        cardFront.textContent = 'Loading Book...';
+        cardBack.textContent = 'Please wait for file download.';
+        updateProgress();
+
+        return fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load JSON: ${response.status} ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                CURRENT_BOOK_CACHE = data;
+                unitSelect.disabled = false;
+                return true;
+            })
+            .catch(error => {
+                console.error("Error loading book:", error);
+                unitSelect.disabled = true;
+                initializeApp([]);
+                return false;
+            });
+    }
+
+    function loadUnitFromCache(unitValue) {
+        if (!CURRENT_BOOK_CACHE) {
+            console.error("Cache is empty. Select a Book first.");
+            return;
+        }
+
+        const [startStr, endStr] = unitValue.split('|');
+        const startIdx = parseInt(startStr, 10);
+        const endIdx = parseInt(endStr, 10);
+
+        const unitData = CURRENT_BOOK_CACHE.slice(startIdx, endIdx);
+        initializeApp(unitData);
+    }
+
+    function initializeApp(fetchedData) {
+        cards = fetchedData && fetchedData.length ? fetchedData : [{
+            front: "Error/No Cards",
+            back: "Could not load data. Select a Book and Unit."
+        }];
+        idx = 0;
+        flipped = false;
+        shuffle();
+    }
+
+    function populateBookSelect() {
+        bookSelect.innerHTML = '';
+        BOOK_OPTIONS.forEach((book, index) => {
+            const option = document.createElement('option');
+            option.textContent = book.name;
+            option.value = book.path;
+            option.dataset.totalWords = book.totalWords;
+            bookSelect.appendChild(option);
+        });
+    }
+
+    function populateUnitSelect(totalWords) {
+        unitSelect.innerHTML = '';
+
+        const allOption = document.createElement('option');
+        allOption.textContent = `All Cards (1–${totalWords})`;
+        allOption.value = `0|${totalWords}`;
+        unitSelect.appendChild(allOption);
+
+        const wordsPerUnit = totalWords / UNITS;
+        if (!Number.isInteger(wordsPerUnit)) {
+            console.error(`Total words (${totalWords}) is not divisible by ${UNITS}. Check book configuration.`);
+            return;
+        }
+
+        for (let i = 0; i < UNITS; i++) {
+            const startIdx = i * wordsPerUnit;
+            const endIdx = startIdx + wordsPerUnit;
+            const option = document.createElement('option');
+            option.textContent = `Unit ${i + 1} (${startIdx + 1}–${endIdx})`;
+            option.value = `${startIdx}|${endIdx}`;
+            unitSelect.appendChild(option);
+        }
+    }
+
+
+    bookSelect.addEventListener('change', (e) => {
+        const selectedBookPath = e.target.value;
+        const totalWords = parseInt(e.target.options[e.target.selectedIndex].dataset.totalWords, 10);
+
+        populateUnitSelect(totalWords);
+
+        fetchAndCacheBook(selectedBookPath)
+            .then(success => {
+                if (success) {
+                    loadUnitFromCache(unitSelect.value);
+                }
+            });
+    });
+
+    unitSelect.addEventListener('change', (e) => {
+        loadUnitFromCache(e.target.value);
+    });
+
+    populateBookSelect();
+
+    bookSelect.dispatchEvent(new Event('change'));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            e.preventDefault();
+            flipped = !flipped;
+            render();
+        }
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+    });
+    mainCard.addEventListener('click', () => {
+        flipped = !flipped;
+        render();
+    });
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    shuffleBtn.addEventListener('click', () => {
+        if (confirm('Shuffle all cards?')) shuffle();
+    });
+
+</script>
+</body>
+</html>
